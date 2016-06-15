@@ -17,11 +17,12 @@ class ShowVC: UIViewController {
     var btn = UIButton()
     var btn1 = UIButton()
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var buttonR: UIButton!
     @IBOutlet weak var buttonL: UIButton!
     @IBOutlet weak var Viewscrollimage: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var scrollImage: UIScrollView!
+   
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var lableAdd: UILabel!
@@ -32,16 +33,16 @@ class ShowVC: UIViewController {
         
         if (self.pageControl.currentPage + 1 < imageArray.count) {
             self.pageControl.currentPage = self.pageControl.currentPage + 1
-            let newOffset = CGPointMake(CGFloat(self.pageControl.currentPage*Int(scrollImage.frame.size.width)), scrollImage.contentOffset.y)
-            scrollImage.setContentOffset(newOffset, animated: true)
+            let newOffset = CGPointMake(CGFloat(self.pageControl.currentPage*Int(collectionView.frame.size.width)), collectionView.contentOffset.y)
+            collectionView.setContentOffset(newOffset, animated: true)
         }
     }
     @IBAction func ckickL(sender: AnyObject) {
         
         if (self.pageControl.currentPage - 1 >= 0) {
             self.pageControl.currentPage = self.pageControl.currentPage - 1
-            let newOffset = CGPointMake(CGFloat(self.pageControl.currentPage*Int(scrollImage.frame.size.width)), scrollImage.contentOffset.y)
-            scrollImage.setContentOffset(newOffset, animated: true)
+            let newOffset = CGPointMake(CGFloat(self.pageControl.currentPage*Int(collectionView.frame.size.width)), collectionView.contentOffset.y)
+            collectionView.setContentOffset(newOffset, animated: true)
         }
     }
     
@@ -54,6 +55,7 @@ class ShowVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         configurePageControl()
         
         //custom button
@@ -85,21 +87,21 @@ class ShowVC: UIViewController {
         self.navigationItem.hidesBackButton = true
         self.navigationItem.setHidesBackButton(true, animated: false)
         
-        //scrollimage
-        scrollImage.showsHorizontalScrollIndicator = false
-        scrollImage.pagingEnabled = true
-        scrollImage.scrollEnabled = true
-        scrollImage.delegate = self
+      
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.pagingEnabled = true
+        collectionView.scrollEnabled = true
+        collectionView.delegate = self
         for (index, image) in imageArray.enumerate() {
             let imageView = UIImageView(image: image)
-            scrollImage.addSubview(imageView)
+            collectionView.addSubview(imageView)
             imageViews.append(imageView)
-            imageView.frame = CGRectMake(CGFloat(index)*scrollImage.frame.size.width, 0,scrollImage.frame.size.width,scrollImage.frame.size.height)
+            imageView.frame = CGRectMake(CGFloat(index)*collectionView.frame.size.width, 0,collectionView.frame.size.width,collectionView.frame.size.height)
         }
-        scrollImage.contentSize = CGSizeMake(scrollImage.frame.size.width*CGFloat(imageArray.count),scrollImage.frame.size.height)
+        collectionView.contentSize = CGSizeMake(collectionView.frame.size.width*CGFloat(imageArray.count),collectionView.frame.size.height)
         
-        self.labelName.text = place.title
-        self.lableAdd.text = place.locationName
+        self.labelName.text = place.name
+        self.lableAdd.text = place.location?.address ?? ""
         
         //mapview
         getmap()
@@ -179,6 +181,6 @@ class ShowVC: UIViewController {
     }
     
 }
-extension ShowVC: UIScrollViewDelegate,MKMapViewDelegate {
+extension ShowVC: UICollectionViewDelegate,MKMapViewDelegate {
     
 }
