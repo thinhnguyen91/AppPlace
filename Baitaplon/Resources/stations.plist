@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0715081</real>
+		<key>long</key>
+		<real>108.2218663</real>
+		<key>no</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Nha hang 1</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0739821</real>
+		<key>long</key>
+		<real>108.2215763</real>
+		<key>no</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Nha hang 2</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0739973</real>
+		<key>long</key>
+		<real>108.2220547</real>
+		<key>no</key>
+		<integer>3</integer>
+		<key>title</key>
+		<string>Nha hang 3</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0713979</real>
+		<key>long</key>
+		<real>108.2240391</real>
+		<key>no</key>
+		<integer>4</integer>
+		<key>title</key>
+		<string>Nha hang 4</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0686566</real>
+		<key>long</key>
+		<real>108.222201</real>
+		<key>no</key>
+		<integer>5</integer>
+		<key>title</key>
+		<string>Nha hang 5</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0720827</real>
+		<key>long</key>
+		<real>108.2192651</real>
+		<key>no</key>
+		<integer>6</integer>
+		<key>title</key>
+		<string>Nha hang 6</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0742092</real>
+		<key>long</key>
+		<real>108.2202441</real>
+		<key>no</key>
+		<integer>7</integer>
+		<key>title</key>
+		<string>Nha hang 7</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0746021</real>
+		<key>long</key>
+		<real>108.2208691</real>
+		<key>no</key>
+		<integer>8</integer>
+		<key>title</key>
+		<string>Nha hang 8</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le duan</string>
+		<key>lat</key>
+		<real>16.0613581</real>
+		<key>long</key>
+		<real>108.2324763</real>
+		<key>no</key>
+		<integer>9</integer>
+		<key>title</key>
+		<string>Nha hang 9</string>
+	</dict>
+	<dict>
+		<key>subtitle</key>
+		<string>add: 123 le loi</string>
+		<key>lat</key>
+		<real>16.0727351</real>
+		<key>long</key>
+		<real>108.2297843</real>
+		<key>no</key>
+		<integer>10</integer>
+		<key>title</key>
+		<string>Nha hang 10</string>
+	</dict>
+</array>
+</plist>

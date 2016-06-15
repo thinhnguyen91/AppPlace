@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA0163DA1CF2A1C000887506 /* ShowDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0163D81CF2A1C000887506 /* ShowDetailVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FA0163DB1CF2A1C000887506 /* ShowDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0163D91CF2A1C000887506 /* ShowDetailVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FA63D89A1CE5CA100026C11F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D8981CE5CA100026C11F /* Cell.xib */; settings = {ASSET_TAGS = (); }; };
+		FA63D89D1CE5D0B70026C11F /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63D89B1CE5D0B70026C11F /* DetailVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FA63D89E1CE5D0B70026C11F /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D89C1CE5D0B70026C11F /* DetailVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FA65B6C01CE5BEAE000489EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FA65B6C11CE5BEAE000489EB /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FAA2FC271D10155E00C7A3C4 /* LocationVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */; settings = {ASSET_TAGS = (); }; };
+		FAA2FC311D101CDB00C7A3C4 /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */; settings = {ASSET_TAGS = (); }; };
+		FAB58EA31CDC402B00C1EDFA /* stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB58EA21CDC402B00C1EDFA /* stations.plist */; settings = {ASSET_TAGS = (); }; };
+		FAB8409A1CDB5840008F92E1 /* MapdetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB840981CDB5840008F92E1 /* MapdetailVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FAB8409B1CDB5840008F92E1 /* MapdetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB840991CDB5840008F92E1 /* MapdetailVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FABA7C9E1CCF18D600289B35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7C9D1CCF18D600289B35 /* AppDelegate.swift */; };
+		FABA7CA51CCF18D700289B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CA41CCF18D700289B35 /* Assets.xcassets */; };
+		FABA7CA81CCF18D700289B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CA61CCF18D700289B35 /* LaunchScreen.storyboard */; };
+		FABA7CFB1CCF1FEB00289B35 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7CEC1CCF1FEB00289B35 /* MapVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FABA7CFC1CCF1FEB00289B35 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CED1CCF1FEB00289B35 /* MapVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FABA7CFD1CCF1FEB00289B35 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7CEF1CCF1FEB00289B35 /* SettingVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FABA7CFE1CCF1FEB00289B35 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CF01CCF1FEB00289B35 /* SettingVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FABA7D0B1CCF22F300289B35 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D091CCF22F300289B35 /* RegisterVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FABA7D0C1CCF22F300289B35 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D0A1CCF22F300289B35 /* RegisterVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FABA7D101CCF239100289B35 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D0E1CCF239100289B35 /* ForgotPasswordVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FABA7D111CCF239100289B35 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D0F1CCF239100289B35 /* ForgotPasswordVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FABA7D141CCF23B000289B35 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D121CCF23B000289B35 /* LoginVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FABA7D151CCF23B000289B35 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D131CCF23B000289B35 /* LoginVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FABA7D191CCF265500289B35 /* FovariteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D171CCF265500289B35 /* FovariteVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FABA7D1A1CCF265500289B35 /* FovariteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D181CCF265500289B35 /* FovariteVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FAEA7F021CE9B7A90077FB81 /* DetailFollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FAEA7F031CE9B7A90077FB81 /* DetailFollowerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FAF068511D0F97A3006F28C3 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF068501D0F97A3006F28C3 /* APIController.swift */; settings = {ASSET_TAGS = (); }; };
+		FAF4F7A71CE41E58009FD9C0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4F7A61CE41E58009FD9C0 /* Place.swift */; settings = {ASSET_TAGS = (); }; };
+		FAFA2EC01CD0732B003B9D7B /* ListtableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EBE1CD0732B003B9D7B /* ListtableView.swift */; settings = {ASSET_TAGS = (); }; };
+		FAFA2EC11CD0732B003B9D7B /* ListtableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFA2EBF1CD0732B003B9D7B /* ListtableView.xib */; settings = {ASSET_TAGS = (); }; };
+		FAFA2EC71CD0B7CF003B9D7B /* SingletionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EC61CD0B7CF003B9D7B /* SingletionClass.swift */; settings = {ASSET_TAGS = (); }; };
+		FAFA2ECB1CD0CCC3003B9D7B /* ShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EC91CD0CCC3003B9D7B /* ShowVC.swift */; settings = {ASSET_TAGS = (); }; };
+		FAFA2ECC1CD0CCC3003B9D7B /* ShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFA2ECA1CD0CCC3003B9D7B /* ShowVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FAFBB45B1D10E4B300B0A14E /* PhotoVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBB45A1D10E4B300B0A14E /* PhotoVenue.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA0163D81CF2A1C000887506 /* ShowDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailVC.swift; sourceTree = "<group>"; };
+		FA0163D91CF2A1C000887506 /* ShowDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailVC.xib; sourceTree = "<group>"; };
+		FA63D8981CE5CA100026C11F /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		FA63D89B1CE5D0B70026C11F /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		FA63D89C1CE5D0B70026C11F /* DetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
+		FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVenue.swift; sourceTree = "<group>"; };
+		FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
+		FAB58EA21CDC402B00C1EDFA /* stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = stations.plist; sourceTree = "<group>"; };
+		FAB840981CDB5840008F92E1 /* MapdetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapdetailVC.swift; path = Baitaplon/Classess/Controller/Tabbar/Home/Show/MapdetailVC.swift; sourceTree = SOURCE_ROOT; };
+		FAB840991CDB5840008F92E1 /* MapdetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapdetailVC.xib; path = Baitaplon/Classess/Controller/Tabbar/Home/Show/MapdetailVC.xib; sourceTree = SOURCE_ROOT; };
+		FABA7C9A1CCF18D600289B35 /* Baitaplon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baitaplon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABA7C9D1CCF18D600289B35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		FABA7CA41CCF18D700289B35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		FABA7CA71CCF18D700289B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FABA7CA91CCF18D700289B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		FABA7CEC1CCF1FEB00289B35 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		FABA7CED1CCF1FEB00289B35 /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
+		FABA7CEF1CCF1FEB00289B35 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		FABA7CF01CCF1FEB00289B35 /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
+		FABA7D091CCF22F300289B35 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		FABA7D0A1CCF22F300289B35 /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		FABA7D0E1CCF239100289B35 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordVC.swift; path = Baitaplon/Classess/Controller/Navi/Forgotpassword/ForgotPasswordVC.swift; sourceTree = SOURCE_ROOT; };
+		FABA7D0F1CCF239100289B35 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ForgotPasswordVC.xib; path = Baitaplon/Classess/Controller/Navi/Forgotpassword/ForgotPasswordVC.xib; sourceTree = SOURCE_ROOT; };
+		FABA7D121CCF23B000289B35 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FABA7D131CCF23B000289B35 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		FABA7D171CCF265500289B35 /* FovariteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FovariteVC.swift; sourceTree = "<group>"; };
+		FABA7D181CCF265500289B35 /* FovariteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FovariteVC.xib; sourceTree = "<group>"; };
+		FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFollowerVC.swift; sourceTree = "<group>"; };
+		FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailFollowerVC.xib; sourceTree = "<group>"; };
+		FAF068501D0F97A3006F28C3 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		FAF4F7A61CE41E58009FD9C0 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = ../Controller/Tabbar/Home/Place.swift; sourceTree = "<group>"; };
+		FAFA2EBE1CD0732B003B9D7B /* ListtableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListtableView.swift; sourceTree = "<group>"; };
+		FAFA2EBF1CD0732B003B9D7B /* ListtableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListtableView.xib; sourceTree = "<group>"; };
+		FAFA2EC61CD0B7CF003B9D7B /* SingletionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingletionClass.swift; path = ../SingletionClass.swift; sourceTree = "<group>"; };
+		FAFA2EC91CD0CCC3003B9D7B /* ShowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowVC.swift; path = Baitaplon/Classess/Controller/Tabbar/Home/Show/ShowVC.swift; sourceTree = SOURCE_ROOT; };
+		FAFA2ECA1CD0CCC3003B9D7B /* ShowVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShowVC.xib; path = Baitaplon/Classess/Controller/Tabbar/Home/Show/ShowVC.xib; sourceTree = SOURCE_ROOT; };
+		FAFBB45A1D10E4B300B0A14E /* PhotoVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoVenue.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FABA7C971CCF18D600289B35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FABA7C911CCF18D600289B35 = {
+			isa = PBXGroup;
+			children = (
+				FABA7C9C1CCF18D600289B35 /* Baitaplon */,
+				FABA7C9B1CCF18D600289B35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FABA7C9B1CCF18D600289B35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7C9A1CCF18D600289B35 /* Baitaplon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FABA7C9C1CCF18D600289B35 /* Baitaplon */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7CAF1CCF1BFF00289B35 /* Classes */,
+			);
+			path = Baitaplon;
+			sourceTree = "<group>";
+		};
+		FABA7CAF1CCF1BFF00289B35 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FAFA2EC61CD0B7CF003B9D7B /* SingletionClass.swift */,
+				FABA7C9D1CCF18D600289B35 /* AppDelegate.swift */,
+				FABA7CD91CCF1FEB00289B35 /* Controller */,
+				FABA7CFF1CCF204700289B35 /* Views */,
+				FABA7D001CCF209100289B35 /* Models */,
+				FABA7D011CCF20C100289B35 /* Libraries */,
+				FABA7CB01CCF1C4300289B35 /* Resources */,
+			);
+			name = Classes;
+			path = Classess;
+			sourceTree = "<group>";
+		};
+		FABA7CB01CCF1C4300289B35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7CA41CCF18D700289B35 /* Assets.xcassets */,
+				FABA7CA91CCF18D700289B35 /* Info.plist */,
+				FABA7CA61CCF18D700289B35 /* LaunchScreen.storyboard */,
+				FAB58EA21CDC402B00C1EDFA /* stations.plist */,
+			);
+			name = Resources;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		FABA7CD91CCF1FEB00289B35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7CDA1CCF1FEB00289B35 /* Navi */,
+				FABA7CE41CCF1FEB00289B35 /* Tabbar */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FABA7CDA1CCF1FEB00289B35 /* Navi */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7D071CCF22E700289B35 /* Login */,
+				FABA7D0D1CCF233E00289B35 /* Forgotpassword */,
+				FABA7D081CCF22F300289B35 /* Register */,
+			);
+			path = Navi;
+			sourceTree = "<group>";
+		};
+		FABA7CE41CCF1FEB00289B35 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7CE81CCF1FEB00289B35 /* Home */,
+				FABA7D161CCF263800289B35 /* Fovarite */,
+				FABA7CEB1CCF1FEB00289B35 /* Map */,
+				FABA7CEE1CCF1FEB00289B35 /* Setting */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		FABA7CE81CCF1FEB00289B35 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */,
+				FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */,
+				FAFA2EBE1CD0732B003B9D7B /* ListtableView.swift */,
+				FAFA2EBF1CD0732B003B9D7B /* ListtableView.xib */,
+				FA63D8981CE5CA100026C11F /* Cell.xib */,
+				FAFA2EC81CD0CB9E003B9D7B /* Show */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FABA7CEB1CCF1FEB00289B35 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7CEC1CCF1FEB00289B35 /* MapVC.swift */,
+				FABA7CED1CCF1FEB00289B35 /* MapVC.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		FABA7CEE1CCF1FEB00289B35 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7CEF1CCF1FEB00289B35 /* SettingVC.swift */,
+				FABA7CF01CCF1FEB00289B35 /* SettingVC.xib */,
+				FA63D89B1CE5D0B70026C11F /* DetailVC.swift */,
+				FA63D89C1CE5D0B70026C11F /* DetailVC.xib */,
+				FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */,
+				FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */,
+				FA0163D81CF2A1C000887506 /* ShowDetailVC.swift */,
+				FA0163D91CF2A1C000887506 /* ShowDetailVC.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		FABA7CFF1CCF204700289B35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FABA7D001CCF209100289B35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4F7A61CE41E58009FD9C0 /* Place.swift */,
+				FAF068501D0F97A3006F28C3 /* APIController.swift */,
+				FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */,
+				FAFBB45A1D10E4B300B0A14E /* PhotoVenue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FABA7D011CCF20C100289B35 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		FABA7D071CCF22E700289B35 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7D121CCF23B000289B35 /* LoginVC.swift */,
+				FABA7D131CCF23B000289B35 /* LoginVC.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FABA7D081CCF22F300289B35 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7D091CCF22F300289B35 /* RegisterVC.swift */,
+				FABA7D0A1CCF22F300289B35 /* RegisterVC.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		FABA7D0D1CCF233E00289B35 /* Forgotpassword */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7D0E1CCF239100289B35 /* ForgotPasswordVC.swift */,
+				FABA7D0F1CCF239100289B35 /* ForgotPasswordVC.xib */,
+			);
+			name = Forgotpassword;
+			path = ForgotpasswordVC;
+			sourceTree = "<group>";
+		};
+		FABA7D161CCF263800289B35 /* Fovarite */ = {
+			isa = PBXGroup;
+			children = (
+				FABA7D171CCF265500289B35 /* FovariteVC.swift */,
+				FABA7D181CCF265500289B35 /* FovariteVC.xib */,
+			);
+			path = Fovarite;
+			sourceTree = "<group>";
+		};
+		FAFA2EC81CD0CB9E003B9D7B /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				FAFA2EC91CD0CCC3003B9D7B /* ShowVC.swift */,
+				FAFA2ECA1CD0CCC3003B9D7B /* ShowVC.xib */,
+				FAB840981CDB5840008F92E1 /* MapdetailVC.swift */,
+				FAB840991CDB5840008F92E1 /* MapdetailVC.xib */,
+			);
+			name = Show;
+			path = ShowVC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FABA7C991CCF18D600289B35 /* Baitaplon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABA7CAC1CCF18D700289B35 /* Build configuration list for PBXNativeTarget "Baitaplon" */;
+			buildPhases = (
+				FABA7C961CCF18D600289B35 /* Sources */,
+				FABA7C971CCF18D600289B35 /* Frameworks */,
+				FABA7C981CCF18D600289B35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Baitaplon;
+			productName = Baitaplon;
+			productReference = FABA7C9A1CCF18D600289B35 /* Baitaplon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FABA7C921CCF18D600289B35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = AsianTech;
+				TargetAttributes = {
+					FABA7C991CCF18D600289B35 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = FABA7C951CCF18D600289B35 /* Build configuration list for PBXProject "Baitaplon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FABA7C911CCF18D600289B35;
+			productRefGroup = FABA7C9B1CCF18D600289B35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FABA7C991CCF18D600289B35 /* Baitaplon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FABA7C981CCF18D600289B35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABA7CFE1CCF1FEB00289B35 /* SettingVC.xib in Resources */,
+				FAFA2ECC1CD0CCC3003B9D7B /* ShowVC.xib in Resources */,
+				FA0163DB1CF2A1C000887506 /* ShowDetailVC.xib in Resources */,
+				FA65B6C11CE5BEAE000489EB /* HomeVC.xib in Resources */,
+				FA63D89A1CE5CA100026C11F /* Cell.xib in Resources */,
+				FA63D89E1CE5D0B70026C11F /* DetailVC.xib in Resources */,
+				FABA7D111CCF239100289B35 /* ForgotPasswordVC.xib in Resources */,
+				FABA7CA81CCF18D700289B35 /* LaunchScreen.storyboard in Resources */,
+				FABA7CA51CCF18D700289B35 /* Assets.xcassets in Resources */,
+				FABA7D0C1CCF22F300289B35 /* RegisterVC.xib in Resources */,
+				FAB8409B1CDB5840008F92E1 /* MapdetailVC.xib in Resources */,
+				FABA7D1A1CCF265500289B35 /* FovariteVC.xib in Resources */,
+				FAEA7F031CE9B7A90077FB81 /* DetailFollowerVC.xib in Resources */,
+				FABA7D151CCF23B000289B35 /* LoginVC.xib in Resources */,
+				FABA7CFC1CCF1FEB00289B35 /* MapVC.xib in Resources */,
+				FAFA2EC11CD0732B003B9D7B /* ListtableView.xib in Resources */,
+				FAB58EA31CDC402B00C1EDFA /* stations.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FABA7C961CCF18D600289B35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABA7D101CCF239100289B35 /* ForgotPasswordVC.swift in Sources */,
+				FAEA7F021CE9B7A90077FB81 /* DetailFollowerVC.swift in Sources */,
+				FAB8409A1CDB5840008F92E1 /* MapdetailVC.swift in Sources */,
+				FAFA2EC01CD0732B003B9D7B /* ListtableView.swift in Sources */,
+				FABA7D141CCF23B000289B35 /* LoginVC.swift in Sources */,
+				FA65B6C01CE5BEAE000489EB /* HomeVC.swift in Sources */,
+				FABA7CFD1CCF1FEB00289B35 /* SettingVC.swift in Sources */,
+				FABA7D191CCF265500289B35 /* FovariteVC.swift in Sources */,
+				FAF4F7A71CE41E58009FD9C0 /* Place.swift in Sources */,
+				FAA2FC311D101CDB00C7A3C4 /* AppDefine.swift in Sources */,
+				FABA7D0B1CCF22F300289B35 /* RegisterVC.swift in Sources */,
+				FAF068511D0F97A3006F28C3 /* APIController.swift in Sources */,
+				FAFBB45B1D10E4B300B0A14E /* PhotoVenue.swift in Sources */,
+				FA0163DA1CF2A1C000887506 /* ShowDetailVC.swift in Sources */,
+				FAFA2EC71CD0B7CF003B9D7B /* SingletionClass.swift in Sources */,
+				FAFA2ECB1CD0CCC3003B9D7B /* ShowVC.swift in Sources */,
+				FABA7CFB1CCF1FEB00289B35 /* MapVC.swift in Sources */,
+				FABA7C9E1CCF18D600289B35 /* AppDelegate.swift in Sources */,
+				FAA2FC271D10155E00C7A3C4 /* LocationVenue.swift in Sources */,
+				FA63D89D1CE5D0B70026C11F /* DetailVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FABA7CA61CCF18D700289B35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FABA7CA71CCF18D700289B35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FABA7CAA1CCF18D700289B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FABA7CAB1CCF18D700289B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FABA7CAD1CCF18D700289B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Baitaplon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ast.Baitaplon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FABA7CAE1CCF18D700289B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Baitaplon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ast.Baitaplon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FABA7C951CCF18D600289B35 /* Build configuration list for PBXProject "Baitaplon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABA7CAA1CCF18D700289B35 /* Debug */,
+				FABA7CAB1CCF18D700289B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABA7CAC1CCF18D700289B35 /* Build configuration list for PBXNativeTarget "Baitaplon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABA7CAD1CCF18D700289B35 /* Debug */,
+				FABA7CAE1CCF18D700289B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FABA7C921CCF18D600289B35 /* Project object */;
+}

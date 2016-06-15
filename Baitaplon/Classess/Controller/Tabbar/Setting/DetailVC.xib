@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVC" customModule="Baitaplon" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonImg" destination="jQZ-1T-tHt" id="6xh-xE-Z1N"/>
+                <outlet property="imgAvatar" destination="acj-BJ-Scp" id="bAW-Ge-sAZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acj-BJ-Scp">
+                    <rect key="frame" x="147" y="115" width="80" height="80"/>
+                    <color key="backgroundColor" red="1" green="0.51344485370000004" blue="0.0076302613290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="ZaY-1W-pD9"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qD0-uA-93y">
+                    <rect key="frame" x="103" y="319" width="169" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="169" id="xPL-rE-VAr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-4t-r9H">
+                    <rect key="frame" x="103" y="276" width="169" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.51344485370000004" blue="0.0076302613290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0yP-q8-DlC">
+                    <rect key="frame" x="103" y="230" width="169" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQZ-1T-tHt">
+                    <rect key="frame" x="147" y="115" width="80" height="80"/>
+                    <connections>
+                        <action selector="kickButton:" destination="-1" eventType="touchUpInside" id="BSJ-lH-Dc3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0yP-q8-DlC" firstAttribute="leading" secondItem="Re1-4t-r9H" secondAttribute="leading" id="5Bv-TP-y8i"/>
+                <constraint firstItem="0yP-q8-DlC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="230" id="5xZ-yi-mCl"/>
+                <constraint firstItem="0yP-q8-DlC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9ke-en-LcH"/>
+                <constraint firstItem="acj-BJ-Scp" firstAttribute="centerX" secondItem="qD0-uA-93y" secondAttribute="centerX" id="DxS-3F-DlG"/>
+                <constraint firstItem="jQZ-1T-tHt" firstAttribute="width" secondItem="acj-BJ-Scp" secondAttribute="width" id="Elq-Cv-Dcf"/>
+                <constraint firstItem="acj-BJ-Scp" firstAttribute="centerX" secondItem="Re1-4t-r9H" secondAttribute="centerX" id="EoA-QV-Tlv"/>
+                <constraint firstItem="acj-BJ-Scp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="115" id="GPo-74-n7w"/>
+                <constraint firstItem="jQZ-1T-tHt" firstAttribute="height" secondItem="acj-BJ-Scp" secondAttribute="height" id="Hgs-zA-JqX"/>
+                <constraint firstItem="qD0-uA-93y" firstAttribute="top" secondItem="Re1-4t-r9H" secondAttribute="bottom" constant="13" id="IO6-Fq-abq"/>
+                <constraint firstItem="jQZ-1T-tHt" firstAttribute="trailing" secondItem="acj-BJ-Scp" secondAttribute="trailing" id="Iu9-pQ-jYD"/>
+                <constraint firstItem="0yP-q8-DlC" firstAttribute="trailing" secondItem="Re1-4t-r9H" secondAttribute="trailing" id="KY9-TE-8sy"/>
+                <constraint firstItem="jQZ-1T-tHt" firstAttribute="bottom" secondItem="acj-BJ-Scp" secondAttribute="bottom" id="bhc-cZ-dTG"/>
+                <constraint firstItem="qD0-uA-93y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="lPO-EA-PLo"/>
+                <constraint firstItem="qD0-uA-93y" firstAttribute="leading" secondItem="Re1-4t-r9H" secondAttribute="leading" id="ldV-RI-iC3"/>
+                <constraint firstItem="jQZ-1T-tHt" firstAttribute="top" secondItem="acj-BJ-Scp" secondAttribute="top" id="lhG-qG-Ept"/>
+                <constraint firstItem="jQZ-1T-tHt" firstAttribute="leading" secondItem="acj-BJ-Scp" secondAttribute="leading" id="r8Q-Em-pDf"/>
+                <constraint firstItem="0yP-q8-DlC" firstAttribute="top" secondItem="acj-BJ-Scp" secondAttribute="bottom" constant="35" id="w62-Ky-H0h"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="133.5" y="196.5"/>
+        </view>
+    </objects>
+</document>
