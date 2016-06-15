@@ -27,12 +27,19 @@
                             <constraint firstAttribute="width" constant="71" id="pXY-aF-xs1"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTx-Re-P5k">
+                        <rect key="frame" x="87" y="8" width="233" height="29"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwc-ss-dGy">
-                        <rect key="frame" x="87" y="33" width="164" height="21"/>
+                        <rect key="frame" x="87" y="25" width="164" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="164" id="1Za-Cu-Be5"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                         <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
@@ -41,29 +48,22 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTx-Re-P5k">
-                        <rect key="frame" x="87" y="8" width="233" height="29"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                        <color key="shadowColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="vpD-3F-6iy" secondAttribute="bottom" constant="-3" id="0J2-W5-Ptc"/>
                     <constraint firstItem="gHR-5J-Low" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="2n3-XO-BrR"/>
                     <constraint firstItem="gHR-5J-Low" firstAttribute="top" secondItem="PTx-Re-P5k" secondAttribute="bottom" constant="9" id="5e8-is-1Ja"/>
-                    <constraint firstItem="Fwc-ss-dGy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="25" id="EnW-eI-iIO"/>
-                    <constraint firstItem="PTx-Re-P5k" firstAttribute="leading" secondItem="Fwc-ss-dGy" secondAttribute="leading" id="GOB-Ml-dYK"/>
+                    <constraint firstItem="Fwc-ss-dGy" firstAttribute="centerY" secondItem="vpD-3F-6iy" secondAttribute="centerY" id="AAz-7t-UWc"/>
                     <constraint firstItem="gHR-5J-Low" firstAttribute="bottom" secondItem="vpD-3F-6iy" secondAttribute="bottom" id="HIe-Yk-FiZ"/>
-                    <constraint firstItem="gHR-5J-Low" firstAttribute="leading" secondItem="Fwc-ss-dGy" secondAttribute="trailing" constant="41" id="QBq-Bg-k4q"/>
+                    <constraint firstItem="Fwc-ss-dGy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="17" id="Ziz-GX-EpN"/>
                     <constraint firstItem="gHR-5J-Low" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="38" id="hBA-M9-Bei"/>
-                    <constraint firstItem="Fwc-ss-dGy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="87" id="hS6-r5-dXf"/>
                     <constraint firstItem="vpD-3F-6iy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="m0v-4u-IGL"/>
                     <constraint firstItem="vpD-3F-6iy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="nQ4-ba-zG0"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Fwc-ss-dGy" secondAttribute="bottom" constant="9" id="o70-cl-06V"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Fwc-ss-dGy" secondAttribute="trailing" constant="61" id="qTe-rJ-0Nn"/>
+                    <constraint firstItem="Fwc-ss-dGy" firstAttribute="leading" secondItem="PTx-Re-P5k" secondAttribute="leading" id="utd-1R-2Hj"/>
                     <constraint firstItem="PTx-Re-P5k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="weO-mq-qSY"/>
                     <constraint firstAttribute="trailing" secondItem="PTx-Re-P5k" secondAttribute="trailing" id="zSY-6R-AJN"/>
+                    <constraint firstItem="Fwc-ss-dGy" firstAttribute="leading" secondItem="vpD-3F-6iy" secondAttribute="trailing" constant="8" symbolic="YES" id="zwP-1U-awt"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
