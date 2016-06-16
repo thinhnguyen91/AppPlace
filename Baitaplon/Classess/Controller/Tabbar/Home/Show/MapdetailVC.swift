@@ -63,9 +63,9 @@ class MapdetailVC: UIViewController {
         
         // 2.
         // toa do cho minh
-        let sourceLocation = CLLocationCoordinate2D(latitude: 16.072637, longitude:108.232218)
+        let sourceLocation = CLLocationCoordinate2D(latitude: 16.075383, longitude:108.233780)
         //toa do nha hang
-        let destinationLocation = CLLocationCoordinate2D(latitude: 16.065422, longitude: 108.220025)
+        let destinationLocation = CLLocationCoordinate2D(latitude: (place.location?.lat)!, longitude: (place.location?.long)!)
         
         // 3.
         let sourcePlacemark = MKPlacemark(coordinate: sourceLocation, addressDictionary: nil)
@@ -157,7 +157,7 @@ class MapdetailVC: UIViewController {
  
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.orangeColor()
+        renderer.strokeColor = UIColor.redColor()
         renderer.lineWidth = 4.0
         
         return renderer

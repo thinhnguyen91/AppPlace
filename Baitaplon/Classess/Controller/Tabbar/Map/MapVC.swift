@@ -25,6 +25,9 @@ class MapVC: UIViewController {
         mapView.delegate = self
         zoomToRegion()
         
+        
+   
+        
         //pin
      //   let annotations = getMapAnnotations()
       //  mapView.addAnnotations(annotations)

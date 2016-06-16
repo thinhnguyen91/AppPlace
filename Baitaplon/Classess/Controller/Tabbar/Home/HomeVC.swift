@@ -48,13 +48,33 @@
         
         let api = APIController()
         api.getDataFromurl(AppDefine.url) { (success, result, error) -> Void in
-            if let result = result {
-                self.places = result
-                self.tableView.reloadData()
-                api.getDataImageurl(AppDefine.urlImage) { (success, imageListString, error) -> Void in
-                    if let imageListString = imageListString {
-                        self.photoVenues = imageListString
-                        self.tableView.reloadData()
+            if !success {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            } else {
+                if let result = result {
+                    self.places = result
+//                    for i in self.places {
+//                        let id = i.id
+//                        api.getDataImageurl(id, complete: { (success, imageListString, error) -> Void in
+//                            i.photo = imageListString
+//                            if i.last {
+//                                tablereloaddata
+//                            }
+//                        })
+//                    }
+                    api.getDataImageurl(AppDefine.urlImage) { (success, imageListString, error) -> Void in
+                        if success {
+                            if let imageListString = imageListString {
+                                self.photoVenues = imageListString
+                            }
+                            self.tableView.reloadData()
+                        } else {
+                            if let error = error {
+                                print(error.localizedDescription)
+                            }
+                        }
                     }
                 }
             }
@@ -85,7 +105,7 @@
         
         cell.nameList.text = place.name
         cell.addessList.text = place.location?.address ?? ""
-        cell.imageList.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "\(photo.getURLOriginal())")!)!)
+        cell.imageList.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "\(photo.getURLPath(300, sizeH: 200))")!)!)
     //    cell.addessList.text = place.
 //        cell.startList.image = imagestar
         
@@ -103,7 +123,9 @@
         
         let item = places[indexPath.row]
         let myshowVC = ShowVC(nibName: "ShowVC", bundle: nil)
+        myshowVC.photoVenues = self.photoVenues
         myshowVC.place = item
+        
         self.navigationController?.pushViewController(myshowVC, animated: true)
         
         print("Cell \(indexPath.row) of Section \(indexPath.section) ")

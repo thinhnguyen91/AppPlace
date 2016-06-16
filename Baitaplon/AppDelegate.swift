@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigation = UINavigationController(rootViewController: loginVC)
         
         // init tabbar
+        
         // navi Home
         let nav1 = UINavigationController()
         let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)

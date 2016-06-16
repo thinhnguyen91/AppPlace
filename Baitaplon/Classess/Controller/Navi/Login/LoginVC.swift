@@ -1,4 +1,4 @@
-//
+ //
 //  LoginVC.swift
 //  Baitaplon
 //
@@ -43,14 +43,14 @@ class LoginVC: UIViewController {
         self.passText.delegate = self
         self.passText.secureTextEntry = true
         
-        let api = APIController()
-        api.getDataFromurl(AppDefine.url) { (success, result, error) -> Void in
-            if let result = result {
-                for place in result {
-                   // print(place.location.address)
-                }
-            }
-        }
+//        let api = APIController()
+//        api.getDataFromurl(AppDefine.url) { (success, result, error) -> Void in
+//            if let result = result {
+//                for place in result {
+//                    print(place.location?.lat)
+//                }
+//            }
+//        }
     }
     
     func login(sender: UIBarButtonItem){

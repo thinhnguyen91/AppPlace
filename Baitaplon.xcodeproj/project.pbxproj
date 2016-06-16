@@ -14,6 +14,8 @@
 		FA63D89E1CE5D0B70026C11F /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D89C1CE5D0B70026C11F /* DetailVC.xib */; settings = {ASSET_TAGS = (); }; };
 		FA65B6C01CE5BEAE000489EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */; settings = {ASSET_TAGS = (); }; };
 		FA65B6C11CE5BEAE000489EB /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FA6A47C21D123CB100A2DF37 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6A47C01D123CB100A2DF37 /* CustomCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FA6A47C31D123CB100A2DF37 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6A47C11D123CB100A2DF37 /* CustomCell.xib */; settings = {ASSET_TAGS = (); }; };
 		FAA2FC271D10155E00C7A3C4 /* LocationVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */; settings = {ASSET_TAGS = (); }; };
 		FAA2FC311D101CDB00C7A3C4 /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */; settings = {ASSET_TAGS = (); }; };
 		FAB58EA31CDC402B00C1EDFA /* stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB58EA21CDC402B00C1EDFA /* stations.plist */; settings = {ASSET_TAGS = (); }; };
@@ -54,6 +56,8 @@
 		FA63D89C1CE5D0B70026C11F /* DetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
 		FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		FA6A47C01D123CB100A2DF37 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		FA6A47C11D123CB100A2DF37 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVenue.swift; sourceTree = "<group>"; };
 		FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
 		FAB58EA21CDC402B00C1EDFA /* stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = stations.plist; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */,
+				FA6A47C01D123CB100A2DF37 /* CustomCell.swift */,
+				FA6A47C11D123CB100A2DF37 /* CustomCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				FA65B6C11CE5BEAE000489EB /* HomeVC.xib in Resources */,
 				FA63D89A1CE5CA100026C11F /* Cell.xib in Resources */,
 				FA63D89E1CE5D0B70026C11F /* DetailVC.xib in Resources */,
+				FA6A47C31D123CB100A2DF37 /* CustomCell.xib in Resources */,
 				FABA7D111CCF239100289B35 /* ForgotPasswordVC.xib in Resources */,
 				FABA7CA81CCF18D700289B35 /* LaunchScreen.storyboard in Resources */,
 				FABA7CA51CCF18D700289B35 /* Assets.xcassets in Resources */,
@@ -395,6 +402,7 @@
 				FABA7CFB1CCF1FEB00289B35 /* MapVC.swift in Sources */,
 				FABA7C9E1CCF18D600289B35 /* AppDelegate.swift in Sources */,
 				FAA2FC271D10155E00C7A3C4 /* LocationVenue.swift in Sources */,
+				FA6A47C21D123CB100A2DF37 /* CustomCell.swift in Sources */,
 				FA63D89D1CE5D0B70026C11F /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

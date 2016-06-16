@@ -31,9 +31,14 @@ class APIController: NSObject {
                 self.extractJson(data, complete: { (success, result) -> Void in
                     if success {
                         complete?(success: success, result: result, error: error)
+                    } else {
+                        if let error = error {
+                            complete?(success: false, result: nil, error: error)
+                        }
                     }
                 })
             }
+            complete?(success: false, result: nil, error: error)
         })
         task.resume()
     }
@@ -55,8 +60,8 @@ class APIController: NSObject {
                         complete(success: true, result: self.places)
                     }
             }
-        } catch let jsonError as NSError {
-            print(jsonError)
+        } catch _ as NSError {
+            complete(success: false, result: [])
         }
         
     }
@@ -74,8 +79,10 @@ class APIController: NSObject {
                     }
                 })
             }
-
-           
+            if let error = error {
+                complete?(success: false, imageListString: nil, error: error)
+            }
+            
         })
         task.resume()
     }
@@ -98,8 +105,8 @@ class APIController: NSObject {
                     complete(success: true, imageListString: self.photoVenues)
             }
             
-        } catch let jsonError as NSError {
-            print(jsonError)
+        } catch _ as NSError {
+            complete(success: false, imageListString: [])
         }
         
     }
