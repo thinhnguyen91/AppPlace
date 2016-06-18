@@ -11,7 +11,7 @@ import MapKit
 
 
 
-typealias APIControllerCallBack = (success: Bool, result: [Place]?, error: NSError?) -> Void
+typealias APIControllerCallBack = (success: Bool, result: [Venue]?, error: NSError?) -> Void
 typealias APIControllerImageCallback = (success: Bool, imageListString: [PhotoVenue]?, error: NSError?) -> Void
 
 class APIController: NSObject {
@@ -20,6 +20,8 @@ class APIController: NSObject {
     var photoVenues = [PhotoVenue]()
     var place: Place!
     var places = [Place]()
+    var venue: Venue!
+    var venues = [Venue]()
     
      func getDataFromurl(url: String, complete: APIControllerCallBack?)  {
         
@@ -43,7 +45,7 @@ class APIController: NSObject {
         task.resume()
     }
     
-    func extractJson(jsonData:NSData, complete: (success: Bool, result: [Place]) -> Void) {
+    func extractJson(jsonData:NSData, complete: (success: Bool, result: [Venue]) -> Void) {
         do {
             if let dict = try NSJSONSerialization.JSONObjectWithData(jsonData, options: []) as? NSDictionary,
                 let res = dict["response"] as? NSDictionary,
@@ -52,12 +54,12 @@ class APIController: NSObject {
                         if let venu = group["items"] as? NSArray {
                             for index in venu {
                                 if let ven = index["venue"] as? [String:AnyObject]{
-                                    let obj = Place(title: "", locationName: "", discipline: "", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0), json: ven) as Place
-                                    self.places.append(obj)
+                                    let obj = Venue(json: ven)
+                                    self.venues.append(obj)
                                 }
                             }
                         }
-                        complete(success: true, result: self.places)
+                        complete(success: true, result: self.venues)
                     }
             }
         } catch _ as NSError {

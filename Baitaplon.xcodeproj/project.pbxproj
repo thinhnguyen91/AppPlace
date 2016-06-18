@@ -36,6 +36,7 @@
 		FABA7D151CCF23B000289B35 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D131CCF23B000289B35 /* LoginVC.xib */; settings = {ASSET_TAGS = (); }; };
 		FABA7D191CCF265500289B35 /* FovariteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D171CCF265500289B35 /* FovariteVC.swift */; settings = {ASSET_TAGS = (); }; };
 		FABA7D1A1CCF265500289B35 /* FovariteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D181CCF265500289B35 /* FovariteVC.xib */; settings = {ASSET_TAGS = (); }; };
+		FAC191EE1D13E0DC007B4FFE /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC191ED1D13E0DC007B4FFE /* Venue.swift */; settings = {ASSET_TAGS = (); }; };
 		FAEA7F021CE9B7A90077FB81 /* DetailFollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */; settings = {ASSET_TAGS = (); }; };
 		FAEA7F031CE9B7A90077FB81 /* DetailFollowerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */; settings = {ASSET_TAGS = (); }; };
 		FAF068511D0F97A3006F28C3 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF068501D0F97A3006F28C3 /* APIController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -80,6 +81,7 @@
 		FABA7D131CCF23B000289B35 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		FABA7D171CCF265500289B35 /* FovariteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FovariteVC.swift; sourceTree = "<group>"; };
 		FABA7D181CCF265500289B35 /* FovariteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FovariteVC.xib; sourceTree = "<group>"; };
+		FAC191ED1D13E0DC007B4FFE /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFollowerVC.swift; sourceTree = "<group>"; };
 		FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailFollowerVC.xib; sourceTree = "<group>"; };
 		FAF068501D0F97A3006F28C3 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				FAF068501D0F97A3006F28C3 /* APIController.swift */,
 				FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */,
 				FAFBB45A1D10E4B300B0A14E /* PhotoVenue.swift */,
+				FAC191ED1D13E0DC007B4FFE /* Venue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				FAFBB45B1D10E4B300B0A14E /* PhotoVenue.swift in Sources */,
 				FA0163DA1CF2A1C000887506 /* ShowDetailVC.swift in Sources */,
 				FAFA2EC71CD0B7CF003B9D7B /* SingletionClass.swift in Sources */,
+				FAC191EE1D13E0DC007B4FFE /* Venue.swift in Sources */,
 				FAFA2ECB1CD0CCC3003B9D7B /* ShowVC.swift in Sources */,
 				FABA7CFB1CCF1FEB00289B35 /* MapVC.swift in Sources */,
 				FABA7C9E1CCF18D600289B35 /* AppDelegate.swift in Sources */,

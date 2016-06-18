@@ -10,15 +10,16 @@
  import MapKit
  
  class HomeVC: UIViewController {
+    
     var tabBar: UITabBar?
+    var place: Place!
+    var venue: Venue!
+    var venues = [Venue]()
     var places = [Place]()
     var locationVenues = [LocationVenue]()
     var photoVenues = [PhotoVenue]()
-    var place: Place!
     var myShowVC = ShowVC()
-    var searchResultsData: NSArray = []
-    
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -33,7 +34,6 @@
         let nib = UINib(nibName: "ListtableView", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
-
         //tabbar
         tabBar = self.tabBarController!.tabBar
         tabBar!.selectionIndicatorImage = UIImage().makeImageWithColorAndSize(uicolorFromHex(16777215),
@@ -54,16 +54,16 @@
                 }
             } else {
                 if let result = result {
-                    self.places = result
-//                    for i in self.places {
-//                        let id = i.id
-//                        api.getDataImageurl(id, complete: { (success, imageListString, error) -> Void in
-//                            i.photo = imageListString
-//                            if i.last {
-//                                tablereloaddata
-//                            }
-//                        })
-//                    }
+                    self.venues = result
+                    //                    for i in self.places {
+                    //                        let id = i.id
+                    //                        api.getDataImageurl(id, complete: { (success, imageListString, error) -> Void in
+                    //                            i.photo = imageListString
+                    //                            if i.last {
+                    //                                tablereloaddata
+                    //                            }
+                    //                        })
+                    //                    }
                     api.getDataImageurl(AppDefine.urlImage) { (success, imageListString, error) -> Void in
                         if success {
                             if let imageListString = imageListString {
@@ -80,56 +80,10 @@
             }
         }
     }
-
     
     
-    // MARK: tableview
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
-        return 1
-    }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.places.count
-    }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell:ListtableView = self.tableView.dequeueReusableCellWithIdentifier("cell") as! ListtableView
-        let place = places[indexPath.row]
-//        let location  = locationVenues[indexPath.row]
-        let photo = photoVenues[indexPath.row]
-//        let imageview: UIImage = UIImage(named: place.avatar)!
-//        let imagestar: UIImage = UIImage(named: place.start)!
-        
-        cell.nameList.text = place.name
-        cell.addessList.text = place.location?.address ?? ""
-        cell.imageList.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "\(photo.getURLPath(300, sizeH: 200))")!)!)
-    //    cell.addessList.text = place.
-//        cell.startList.image = imagestar
-        
-        return cell
-        
-    }
-
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 72
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        let item = places[indexPath.row]
-        let myshowVC = ShowVC(nibName: "ShowVC", bundle: nil)
-        myshowVC.photoVenues = self.photoVenues
-        myshowVC.place = item
-        
-        self.navigationController?.pushViewController(myshowVC, animated: true)
-        
-        print("Cell \(indexPath.row) of Section \(indexPath.section) ")
-    }
     
     func uicolorFromHex(rgbValue:UInt32)->UIColor{
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
@@ -149,96 +103,47 @@
  }
  extension HomeVC: UITableViewDelegate,  UITableViewDataSource {
     
+    // MARK: tableview
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
     
-//    func getDataFromurl(url: String) {
-//        
-//        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-//        let session = NSURLSession.sharedSession()
-//        request.HTTPMethod = "GET"
-//        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-//            self.extractJson(data!)
-//        })
-//        task.resume()
-//    }
-//    
-//    func extractJson(jsonData:NSData) {
-//        do {
-//            if let dict = try NSJSONSerialization.JSONObjectWithData(jsonData, options: []) as? NSDictionary,
-//                let res = dict["response"] as? NSDictionary,
-//                let groups = res["groups"] as? NSArray {
-//                    for group in groups {
-//                        if let venu = group["items"] as? NSArray {
-//                            for index in venu {
-//                                if let ven = index["venue"] as? [String:AnyObject]{
-//                                    let obj = Place(title: "", locationName: "", discipline: "", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0), json: ven)
-//                                    self.places.append(obj)
-//                                    
-//                                    if let loca = ven["location"] as? [String:AnyObject] {
-//                                        let location = LocationVenue(json: loca)
-//                                        self.locationVenues.append(location)
-//                                    }
-//
-//                                  
-//                                    
-//                                }
-//                                
-//                            }
-//                            
-//                        }
-//                        
-//                    }
-//            }
-//            self.tableRefresh()
-//            
-//        } catch let jsonError as NSError {
-//            print(jsonError)
-//        }
-//        
-//    }
-//    // MARK: jsonimage
-//    func getDataImageurl(url: String) {
-//        
-//        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-//        let session = NSURLSession.sharedSession()
-//        request.HTTPMethod = "GET"
-//        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-//            self.extractJsonImage(data!)
-//        })
-//        task.resume()
-//    }
-//    
-//    func extractJsonImage(jsonImage:NSData) {
-//        do {
-//            if let dict = try NSJSONSerialization.JSONObjectWithData(jsonImage, options: []) as? NSDictionary,
-//                let res = dict["response"] as? NSDictionary,
-//                let photos = res["photos"] as? NSDictionary,let items = photos["items"] as? NSArray {
-//                    for item in items {
-//                        let images = PhotoVenue()
-//                        images.id = item["id"] as! String
-//                        images.prefix = item["prefix"] as! String
-//                        images.suffix = item["suffix"] as! String
-//                        images.width = item["width"] as! Int
-//                        images.height = item["height"] as! Int
-//                        
-//                        self.photoVenues.append(images)
-//                    }
-//                    print(photoVenues)
-//            }
-//            self.tableRefresh()
-//            
-//        } catch let jsonError as NSError {
-//            print(jsonError)
-//        }
-//        
-//    }
-//       func tableRefresh()
-//    {
-//        dispatch_async(dispatch_get_main_queue(), {
-//            self.tableView.reloadData()
-//            return
-//        })
-//    }
-//    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.venues.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell:ListtableView = self.tableView.dequeueReusableCellWithIdentifier("cell") as! ListtableView
+        let venue = venues[indexPath.row]
+        let photo = photoVenues[indexPath.row]
+      
+        cell.nameList.text = venue.name
+        cell.addessList.text = venue.location?.address ?? ""
+        cell.imageList.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "\(photo.getURLPath(300, sizeH: 200))")!)!)
+        
+        return cell
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 72
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let item = venues[indexPath.row]
+        let myshowVC = ShowVC(nibName: "ShowVC", bundle: nil)
+        myshowVC.photoVenues = self.photoVenues
+        myshowVC.venue = item
+        
+        self.navigationController?.pushViewController(myshowVC, animated: true)
+        print("Cell \(indexPath.row) of Section \(indexPath.section) ")
+    }
+
+
  }
  
  extension UIImage {

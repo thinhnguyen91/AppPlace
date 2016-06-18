@@ -13,6 +13,7 @@ class ShowDetailVC: UIViewController {
     var btn = UIButton()
     var btn1 = UIButton()
     var place: Place!
+    var venue: Venue!
     
     @IBOutlet weak var imgShow: UIImageView!
     @IBOutlet weak var textName: UITextField!
@@ -22,7 +23,7 @@ class ShowDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = place.name
+        self.title = venue.name
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
@@ -50,7 +51,7 @@ class ShowDetailVC: UIViewController {
         self.textName.delegate = self
         self.phoneText.delegate = self
         
-        self.textName.text = place.name
+        self.textName.text = venue.name
         self.phoneText.text = String(place.phone)
         self.imgShow.image = UIImage(named: place.avatar)
     }

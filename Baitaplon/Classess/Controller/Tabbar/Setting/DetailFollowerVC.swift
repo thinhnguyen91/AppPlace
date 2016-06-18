@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 class DetailFollowerVC: UIViewController {
     var places = [Place]()
+    var venues = [Venue]()
     var list: ListtableView!
     var btn = UIButton()
     @IBOutlet weak var tableDetailFollower: UITableView!
@@ -95,7 +96,7 @@ class DetailFollowerVC: UIViewController {
         let imageview: UIImage = UIImage(named: place.avatar)!
         
         cell.avatar.image = imageview
-        cell.nameLable.text = place.name
+       // cell.nameLable.text = place.name
         cell.phoneLable.text = String(place.phone)
         //cell.phoneLable.hidden = true
         return cell

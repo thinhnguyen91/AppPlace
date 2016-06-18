@@ -42,7 +42,7 @@ class LoginVC: UIViewController {
         self.userText.delegate = self
         self.passText.delegate = self
         self.passText.secureTextEntry = true
-        
+//        
 //        let api = APIController()
 //        api.getDataFromurl(AppDefine.url) { (success, result, error) -> Void in
 //            if let result = result {

@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 class MapdetailVC: UIViewController {
     var place: Place!
+    var venue: Venue!
+    var photo: PhotoVenue!
     var mypapvc: MapVC!
     var myshow: ShowVC!
     var myhome: HomeVC!
@@ -38,26 +40,9 @@ class MapdetailVC: UIViewController {
         let item1 = UIBarButtonItem()
         item1.customView = btn1
         self.navigationItem.leftBarButtonItem = item1
-        self.navigationItem.hidesBackButton = true
-
-//        //mapview
-//        let location = CLLocationCoordinate2D(
-//            latitude: 16.071685,
-//            longitude: 108.219485)
-//        let span = MKCoordinateSpanMake(0.01, 0.01)
-//        let region = MKCoordinateRegion(center: location, span: span)
-//        mapdetailview.setRegion(region, animated: true)
-//        
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate = location
-//        
-//        annotation.title = place.title
-//        annotation.subtitle = place.subtitle
-//        
-//        mapdetailview.addAnnotation(annotation)
-//       
-//        
+     
         self.zoomToRegion()
+        
         // 1.
         mapdetailview.delegate = self
         
@@ -65,7 +50,7 @@ class MapdetailVC: UIViewController {
         // toa do cho minh
         let sourceLocation = CLLocationCoordinate2D(latitude: 16.075383, longitude:108.233780)
         //toa do nha hang
-        let destinationLocation = CLLocationCoordinate2D(latitude: (place.location?.lat)!, longitude: (place.location?.long)!)
+        let destinationLocation = CLLocationCoordinate2D(latitude: (venue.location?.lat)!, longitude: (venue.location?.long)!)
         
         // 3.
         let sourcePlacemark = MKPlacemark(coordinate: sourceLocation, addressDictionary: nil)
@@ -84,8 +69,8 @@ class MapdetailVC: UIViewController {
         }
         
         let destinationAnnotation = MKPointAnnotation()
-        destinationAnnotation.title = place.title
-        destinationAnnotation.subtitle = place.subtitle
+        destinationAnnotation.title = venue.name
+        destinationAnnotation.subtitle = venue.location?.address
        
         if let location = destinationPlacemark.location {
             destinationAnnotation.coordinate = location.coordinate
@@ -124,6 +109,13 @@ class MapdetailVC: UIViewController {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("ok")
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
+    
     func backhome (sender: UIBarButtonItem){
      self.navigationController?.popToRootViewControllerAnimated(true)
     }
@@ -148,7 +140,7 @@ class MapdetailVC: UIViewController {
             let buttonlift: UIButton = UIButton(type: UIButtonType.Custom)
             buttonlift.frame.size.width = 44
             buttonlift.frame.size.height = 44
-            buttonlift.setImage(UIImage(named: place.avatar)?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
+         //  buttonlift.setImage(UIImage(named:photo.getURLPath(44, sizeH: 44))?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
             anView!.leftCalloutAccessoryView = buttonlift
             
             return anView
