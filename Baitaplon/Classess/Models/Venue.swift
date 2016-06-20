@@ -9,6 +9,7 @@
 import UIKit
 
 class Venue: NSObject {
+    var index = 0
     var id = ""
     var name = ""
     var rating: Float = 0.0
@@ -24,5 +25,4 @@ class Venue: NSObject {
             self.location = LocationVenue(json: locationDictionary as! [String : AnyObject])
         }
     }
-
 }

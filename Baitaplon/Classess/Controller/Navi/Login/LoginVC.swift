@@ -38,61 +38,39 @@ class LoginVC: UIViewController {
             style: UIBarButtonItemStyle.Plain,
             target: self,
             action: "login:")
-
         self.userText.delegate = self
         self.passText.delegate = self
         self.passText.secureTextEntry = true
-//        
-//        let api = APIController()
-//        api.getDataFromurl(AppDefine.url) { (success, result, error) -> Void in
-//            if let result = result {
-//                for place in result {
-//                    print(place.location?.lat)
-//                }
-//            }
-//        }
     }
     
-    func login(sender: UIBarButtonItem){
-        
+    func login(sender: UIBarButtonItem) {
         let user:NSString = "xuanthinh"
         let pass:NSString = "123"
-        
         if userText.text == user && passText.text == pass {
             AppDelegate.sharedInstance().loginSuccess()
-           
             print("login")
         } else if userText.text == user && passText.text != pass {
-            
                 let alert = UIAlertController(title: "Error!",
                     message: "Please enter a password!",
                     preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK",
                     style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
-            
         } else if userText.text != user && passText.text == pass {
-            
                 let alert = UIAlertController(title: "Error!",
                     message: "Please enter a email !",
                     preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK",
                     style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
-             
-            
         } else if userText.text != user && passText.text != pass {
-            
                 let alert = UIAlertController(title: "Error!",
                     message: "Please enter a email and password !",
                     preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK",
                     style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
-            
-                // print( "Please enter a email and password !")
         }
-        
         if userText.text == "" && passText.text == "" {
                 let alert = UIAlertController(title: "Error!",
                     message: "Please enter a email and password !",
@@ -100,28 +78,20 @@ class LoginVC: UIViewController {
                 alert.addAction(UIAlertAction(title: "OK",
                     style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
-            
-                // "Please enter a email and password !"
-            
         } else if passText.text == "" && userText.text != "" {
-            
                 let alert = UIAlertController(title: "Error!",
                     message: "Please enter a password!",
                     preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK",
                     style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
-                // thongbao.text = "Please enter a password !"
-            
         } else if passText.text != "" && userText.text == "" {
-            
                 let alert = UIAlertController(title: "Error!",
                     message: "Please enter a email !",
                     preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK",
                     style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
-                //thongbao.text = "Please enter a email !"
         }
     }
     
@@ -131,16 +101,13 @@ class LoginVC: UIViewController {
         textField.resignFirstResponder()
         return true
     }
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     func uicolorFromHex(rgbValue:UInt32)->UIColor{
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
         let blue = CGFloat(rgbValue & 0xFF)/256.0
-        
         return UIColor(red:red, green:green, blue:blue, alpha:1.0)
     }
     override func didReceiveMemoryWarning() {

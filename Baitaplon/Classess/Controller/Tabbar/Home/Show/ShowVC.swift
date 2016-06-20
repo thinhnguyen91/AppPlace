@@ -14,12 +14,11 @@ class ShowVC: UIViewController {
     var place: Place!
     var venues = [Venue]()
     var places = [Place]()
-    var photoVenues = [PhotoVenue]()
     var photo: PhotoVenue!
     var mymapvc: MapVC!
     var myfovaritlevc: FovariteVC!
-    var btn = UIButton()
-    var btn1 = UIButton()
+    var buttionBack = UIButton()
+    var buttionStar = UIButton()
   
     @IBOutlet weak var buttonLift: UIButton!
     @IBOutlet weak var buttonRight: UIButton!
@@ -35,29 +34,25 @@ class ShowVC: UIViewController {
         super.viewDidLoad()
         
         configurePageControl()
-    
         //custom button
-        btn1.setImage(UIImage(named: "star50"), forState: .Normal)
-        btn1.frame = CGRectMake(0, 0, 25, 25)
-        btn1.addTarget(self, action: Selector("action1:"), forControlEvents: .TouchUpInside)
+        buttionStar.setImage(UIImage(named: "star50"), forState: .Normal)
+        buttionStar.frame = CGRectMake(0, 0, 25, 25)
+        buttionStar.addTarget(self, action: Selector("action1:"), forControlEvents: .TouchUpInside)
         let item1 = UIBarButtonItem()
-        item1.customView = btn1
+        item1.customView = buttionStar
         self.navigationItem.rightBarButtonItem = item1
-        
-        btn.setImage(UIImage(named: "Back-25"), forState: .Normal)
-        btn.frame = CGRectMake(0, 0, 25, 25)
-        btn.setTitle("", forState: UIControlState.Normal)
-        btn.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
+        buttionBack.setImage(UIImage(named: "Back-25"), forState: .Normal)
+        buttionBack.frame = CGRectMake(0, 0, 25, 25)
+        buttionBack.setTitle("", forState: UIControlState.Normal)
+        buttionBack.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
         let item = UIBarButtonItem()
-        item.customView = btn
+        item.customView = buttionBack
         self.navigationItem.leftBarButtonItem = item
-        
         if venue.isFovarite {
-            btn1.setImage(UIImage(named: "Star_50"), forState: .Normal)
+            buttionStar.setImage(UIImage(named: "Star_50"), forState: .Normal)
         }  else {
-            btn1.setImage(UIImage(named: "star50"), forState: .Normal)
+            buttionStar.setImage(UIImage(named: "star50"), forState: .Normal)
         }
-        
         self.title = "SHOW"
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -65,17 +60,14 @@ class ShowVC: UIViewController {
 
         self.labelName.text = venue.name
         self.lableAdd.text = venue.location?.address ?? ""
-        
         let nib = UINib(nibName:"CustomCell", bundle: nil)
         collectionView.registerNib(nib, forCellWithReuseIdentifier: "CustomCell")
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.scrollEnabled = true
-        
-        for i in self.photoVenues {
+        for i in self.venue.photos! {
             print("Image image ", i.getURLOriginal())
         }
-   
         getmap()
         self.collectionView.reloadData()
         
@@ -89,13 +81,13 @@ class ShowVC: UIViewController {
     }
     
     //MARK: action
+
     @IBAction func ckickmap(sender: AnyObject) {
-        
         let mymapdetailVC = MapdetailVC(nibName: "MapdetailVC", bundle: nil)
         mymapdetailVC.venue = self.venue
         self.navigationController?.pushViewController(mymapdetailVC, animated: true)
-        
     }
+    
     @IBAction func ckichLift(sender: AnyObject) {
         if (self.pageControl.currentPage - 1 >= 0) {
             self.pageControl.currentPage = self.pageControl.currentPage - 1
@@ -104,10 +96,10 @@ class ShowVC: UIViewController {
         }
 
     }
+    
     @IBAction func ckichRight(sender: AnyObject) {
         print("pagecurrnet" , self.pageControl.currentPage)
-       
-        if (self.pageControl.currentPage + 1 < photoVenues.count) {
+        if (self.pageControl.currentPage + 1 < self.venue.photos!.count) {
             self.pageControl.currentPage = self.pageControl.currentPage + 1
             let newOffset = CGPointMake(CGFloat(self.pageControl.currentPage*Int(collectionView.frame.size.width)), collectionView.contentOffset.y)
             collectionView.setContentOffset(newOffset, animated: true)
@@ -119,21 +111,20 @@ class ShowVC: UIViewController {
     }
     
     func action1(sender: UIBarButtonItem){
-        
         print("ckick star")
         venue.isFovarite = !venue.isFovarite
         if venue.isFovarite {
-            btn1.setImage(UIImage(named: "Star_50"), forState: .Normal)
+            buttionStar.setImage(UIImage(named: "Star_50"), forState: .Normal)
         }  else {
-            btn1.setImage(UIImage(named: "star50"), forState: .Normal)
+            buttionStar.setImage(UIImage(named: "star50"), forState: .Normal)
         }
-        
     }
     
-    // pagecontrol
+    //MARK: pagecontrol
     func configurePageControl() {
-        
-        self.pageControl.numberOfPages = photoVenues.count
+        if let photoCount = self.venue.photos?.count {
+            self.pageControl.numberOfPages = photoCount
+        }
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.grayColor()
         self.pageControl.pageIndicatorTintColor = UIColor.grayColor()
@@ -143,11 +134,9 @@ class ShowVC: UIViewController {
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -156,19 +145,19 @@ class ShowVC: UIViewController {
     
 }
 extension ShowVC: UICollectionViewDelegate, UICollectionViewDataSource{
-    
     // MARK: Collection
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.photoVenues.count
+        return self.venue.photos!.count
     }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomCell", forIndexPath: indexPath) as! CustomCell
-        let photo = photoVenues[indexPath.row]
-        cell.imageCell.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "\(photo.getURLPath(300, sizeH: 200))")!)!)
-        
+        let photo = self.venue.photos![indexPath.row]
+        cell.imageCell.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "\(photo.getURLPath(300 , sizeH: 200))")!)!)
+        cell.imageCell.contentMode = UIViewContentMode.ScaleAspectFill
         return cell
     }
- 
 }
 
 extension ShowVC: MKMapViewDelegate{
@@ -179,15 +168,14 @@ extension ShowVC: MKMapViewDelegate{
         let span = MKCoordinateSpanMake(0.009, 0.009)
         let region = MKCoordinateRegion(center: location, span: span)
         mapview.setRegion(region, animated: true)
-        
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
         mapview.addAnnotation(annotation)
         mapview.delegate = self
     }
+    
     func mapView(mapView: MKMapView,
         viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-            
             if (annotation is MKUserLocation) {
                 return nil
             }

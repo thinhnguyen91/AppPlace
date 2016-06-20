@@ -18,12 +18,10 @@ class PhotoVenue: NSObject {
     var img = UIImage(named: "no_image")
     
     func getURLPath(sizeW: Int,sizeH: Int) -> String {
-        
         return prefix + "\(sizeW)x\(sizeH)" + suffix
     }
+    
     func getURLOriginal() -> String {
         return prefix + "original" + suffix
-        
     }
-
 }

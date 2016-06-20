@@ -9,7 +9,7 @@
 import UIKit
 
 class ForgotPasswordVC: UIViewController {
-    var btn = UIButton()
+    var buttionBack = UIButton()
     
     @IBOutlet weak var forgotText: UITextField!
     override func viewDidLoad() {
@@ -24,14 +24,13 @@ class ForgotPasswordVC: UIViewController {
             action: "done:")
         self.navigationItem.setHidesBackButton(false, animated: false)
         self.navigationItem.hidesBackButton = true
-        
         //custom button
-        btn.setImage(UIImage(named: "Back-25"), forState: .Normal)
-        btn.frame = CGRectMake(0, 0, 25, 25)
-        btn.setTitle("", forState: UIControlState.Normal)
-        btn.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
+        buttionBack.setImage(UIImage(named: "Back-25"), forState: .Normal)
+        buttionBack.frame = CGRectMake(0, 0, 25, 25)
+        buttionBack.setTitle("", forState: UIControlState.Normal)
+        buttionBack.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
         let item = UIBarButtonItem()
-        item.customView = btn
+        item.customView = buttionBack
         self.navigationItem.leftBarButtonItem = item
         
         self.forgotText.delegate = self
@@ -41,12 +40,9 @@ class ForgotPasswordVC: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
     func done(sender: UIBarButtonItem){
-      
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
-    
     //MARK: toucher textfiled
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -55,13 +51,11 @@ class ForgotPasswordVC: UIViewController {
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
         let blue = CGFloat(rgbValue & 0xFF)/256.0
-        
         return UIColor(red:red, green:green, blue:blue, alpha:1.0)
     }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

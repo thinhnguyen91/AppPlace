@@ -11,15 +11,16 @@ import MapKit
 class MapVC: UIViewController {
     
     var place: Place!
-    var places = [Place]()
+//    var places = [Place]()
     var photoVenues = [PhotoVenue]()
     var photo: PhotoVenue!
     var venues = [Venue]()
     var venue: Venue!
-    
+    var placesTemp = [Place]()
+
     @IBOutlet weak var mapView: MKMapView!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,11 +28,8 @@ class MapVC: UIViewController {
         self.navigationController?.navigationBar.barTintColor = uicolorFromHex(16729344)
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
         mapView.delegate = self
         zoomToRegion()
-        
-        //API
         let api = APIController()
         api.getDataFromurl(AppDefine.url) { (success, result, error) -> Void in
             if !success {
@@ -40,52 +38,55 @@ class MapVC: UIViewController {
                 }
             } else {
                 if let result = result {
-                    
                     self.venues = result
-                    // pin
+                    let venue = self.venues[0]
                     let annotations = self.getMapAnnotations()
                     self.mapView.showAnnotations(annotations, animated: true)
-
-                    
-                    api.getDataImageurl(AppDefine.urlImage) { (success, imageListString, error) -> Void in
-                        if success {
-                            if let imageListString = imageListString {
-                                self.photoVenues = imageListString
-                            }
-                            self.mapView.reloadInputViews()
-                        } else {
-                            if let error = error {
-                                print(error.localizedDescription)
+                    let url = AppDefine.urlImageEndPoint + venue.id + AppDefine.urlImageOauth_token
+                    print(url)
+                }
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), { () -> Void in
+                    for i in 0 ..< self.venues.count {
+                        let vn: Venue = self.venues[i]
+                        let url = AppDefine.urlImageEndPoint + vn.id + AppDefine.urlImageOauth_token
+                        api.getDataImageurl(url, index: i) { (success, index, imageListString, error) -> Void in
+                            if success {
+                                if let imageListString = imageListString {
+                                    self.venues[index].photos = imageListString
+                                }
+                                if index == self.venues.count - 1 {
+                                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                        self.mapView.reloadInputViews()
+                                    })
+                                }
+                            } else {
+                                if let error = error {
+                                    print(error.localizedDescription)
+                                }
                             }
                         }
                     }
-                }
+                })
             }
         }
-
-        
     }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         print("ok")
        
     }
     
-    
+    // MARK: Action
     
     func buttonClicked(sender: UIButton){
         print(sender.tag)
         let myshow = ShowVC(nibName: "ShowVC", bundle: nil)
-        let item = Place(title: venue.name,
-            locationName: (venue.location?.address)! ,
-            discipline: "Restaurant30",
-            coordinate: CLLocationCoordinate2D(latitude: (venue.location?.lat)! , longitude: (venue.location?.long)! ))
-        myshow.place = item
+        let item = venues[sender.tag]
+        myshow.venue = item
         self.navigationController?.pushViewController(myshow, animated: true)
     }
-    
 
-    
     func uicolorFromHex(rgbValue:UInt32)->UIColor{
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
@@ -101,13 +102,12 @@ class MapVC: UIViewController {
 }
 extension MapVC: MKMapViewDelegate  {
     
-    
     // MARK:- mapview
     func getMapAnnotations()-> [Place] {
-        
-        var placesTemp = [Place]()
+        var venueIndex = -1
         for index in venues {
-            let pin = Place(title: index.name , locationName: (index.location?.address)!, discipline: "", coordinate: CLLocationCoordinate2D(latitude:(index.location?.lat)! , longitude: (index.location?.long)!))
+            venueIndex = venueIndex + 1
+            let pin = Place(title: index.name , locationName: (index.location?.address)!, discipline: "", coordinate: CLLocationCoordinate2D(latitude:(index.location?.lat)! , longitude: (index.location?.long)!) , index: venueIndex)
             placesTemp.append(pin)
         }
         return placesTemp
@@ -119,26 +119,17 @@ extension MapVC: MKMapViewDelegate  {
         }
         let reuseId = "Restaurant30"
         var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
-        
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             anView!.image = UIImage(named:"Marker-25")
             anView!.canShowCallout = true
             anView!.calloutOffset = CGPoint(x: 0, y: 0)
-            
             let place = annotation as! Place
-            let button : UIButton = UIButton(type: UIButtonType.DetailDisclosure)
-            button.tag = place.index
-            
-            button.setImage(UIImage(named: "next")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
-            button.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-            anView!.rightCalloutAccessoryView = button
-            
-            let buttonlift: UIButton = UIButton(type: UIButtonType.Custom)
-            buttonlift.frame.size.width = 44
-            buttonlift.frame.size.height = 44
-            //buttonlift.setImage(UIImage(named: photo.getURLPath(44, sizeH: 44))?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
-            anView!.leftCalloutAccessoryView = buttonlift
+            let buttionPin : UIButton = UIButton(type: UIButtonType.DetailDisclosure)
+            buttionPin.tag = place.index
+            buttionPin.setImage(UIImage(named: "next")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
+            buttionPin.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+            anView!.rightCalloutAccessoryView = buttionPin
         } else {
             anView!.annotation = annotation
         }
@@ -147,16 +138,15 @@ extension MapVC: MKMapViewDelegate  {
     
     func mapViewWillStartLoadingMap(mapView: MKMapView){
         self.activityIndicator.startAnimating()
-        
     }
     
     func mapViewDidFinishLoadingMap(mapView: MKMapView){
         self.activityIndicator.stopAnimating()
         activityIndicator.hidden = true
     }
+    
     // map zom
     func zoomToRegion() {
-        
         let location = CLLocationCoordinate2D(latitude: 16.0718911, longitude: 108.2228753)
         let span = MKCoordinateSpanMake(0.05, 0.01)
         let region = MKCoordinateRegion(center: location, span: span)
