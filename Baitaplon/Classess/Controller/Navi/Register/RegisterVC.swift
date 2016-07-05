@@ -9,7 +9,7 @@
 import UIKit
 
 class RegisterVC: UIViewController {
-    var btn = UIButton()
+    var buttionBack = UIButton()
     
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var userRegi: UITextField!
@@ -31,24 +31,20 @@ class RegisterVC: UIViewController {
             action: "done:")
         self.navigationItem.hidesBackButton = true
         self.navigationItem.setHidesBackButton(true, animated: false)
-        
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.scrollEnabled = true
         scrollView.delegate = self
         scrollView.contentSize.height = 700
-        
         //custom button
-        btn.setImage(UIImage(named: "Back-25"), forState: .Normal)
-        btn.frame = CGRectMake(0, 0, 25, 25)
-        btn.setTitle("", forState: UIControlState.Normal)
-        btn.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
+        buttionBack.setImage(UIImage(named: "Back-25"), forState: .Normal)
+        buttionBack.frame = CGRectMake(0, 0, 25, 25)
+        buttionBack.setTitle("", forState: UIControlState.Normal)
+        buttionBack.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
         let item = UIBarButtonItem()
-        item.customView = btn
+        item.customView = buttionBack
         self.navigationItem.leftBarButtonItem = item
-        
         self.avatar.layer.cornerRadius = avatar.frame.size.width / 2
         self.avatar.clipsToBounds = true
-        
         self.userRegi.delegate = self
         self.passRegi.delegate = self
         self.newpassRegi.delegate = self
@@ -58,25 +54,21 @@ class RegisterVC: UIViewController {
     func done(sender: UIBarButtonItem){
         AppDelegate.sharedInstance().loginSuccess()
         print("done")
-        
     }
     func back(sender: UIBarButtonItem){
         self.navigationController?.popViewControllerAnimated(true)
     }
     //MARK: toucher textfiled
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
     }
     
 }

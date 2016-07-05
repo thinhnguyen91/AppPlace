@@ -39,36 +39,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigation = UINavigationController(rootViewController: loginVC)
         
         // init tabbar
+        
         // navi Home
-        let nav1 = UINavigationController()
+        let navigationHomeVC = UINavigationController()
         let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
-        nav1.viewControllers = [homeVC]
-        nav1.title = "HOME"
-        nav1.tabBarItem.image = UIImage(named: "Home_2")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        navigationHomeVC.viewControllers = [homeVC]
+        navigationHomeVC.title = "HOME"
+        navigationHomeVC.tabBarItem.image = UIImage(named: "Home_2")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
         //navi favorite
-        let nav2 = UINavigationController()
+        let navigationFovariteVC = UINavigationController()
         let favoriteVC = FovariteVC(nibName: "FovariteVC", bundle: nil)
-        nav2.viewControllers = [favoriteVC]
-        nav2.title = "FOVARITE"
-        nav2.tabBarItem.image = UIImage(named: "Star-30")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        navigationFovariteVC.viewControllers = [favoriteVC]
+        navigationFovariteVC.title = "FOVARITE"
+        navigationFovariteVC.tabBarItem.image = UIImage(named: "Star-30")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
         //navi map
-        let nav3 = UINavigationController()
+        let navigationMapVC = UINavigationController()
         let mapVC = MapVC(nibName: "MapVC", bundle: nil)
-        nav3.viewControllers = [mapVC]
-        nav3.title = "MAP"
-        nav3.tabBarItem.image = UIImage(named: "map30")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        navigationMapVC.viewControllers = [mapVC]
+        navigationMapVC.title = "MAP"
+        navigationMapVC.tabBarItem.image = UIImage(named: "map30")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
         //navi setting
-        let nav4 = UINavigationController()
+        let navigationSeettingVC = UINavigationController()
         let settingVC = SettingVC(nibName: "SettingVC", bundle: nil)
-        nav4.viewControllers = [settingVC]
-        nav4.title = "SETTING"
-        nav4.tabBarItem.image = UIImage(named: "Settings-30")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        navigationSeettingVC.viewControllers = [settingVC]
+        navigationSeettingVC.title = "SETTING"
+        navigationSeettingVC.tabBarItem.image = UIImage(named: "Settings-30")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
         tabbar = UITabBarController()
-        tabbar!.viewControllers = [nav1, nav2, nav3, nav4]
+        tabbar!.viewControllers = [navigationHomeVC, navigationFovariteVC, navigationMapVC, navigationSeettingVC]
         tabbar!.tabBar.barTintColor = uicolorFromHex(16729344)
         tabbar!.tabBar.tintColor = uicolorFromHex(16729344)
         

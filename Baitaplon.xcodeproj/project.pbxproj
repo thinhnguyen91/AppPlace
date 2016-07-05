@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B3E045C1D2BA55C00136DFD /* TestGitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E045B1D2BA55C00136DFD /* TestGitHub.swift */; };
+		4B3E045E1D2BA84600136DFD /* TestGitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E045D1D2BA84600136DFD /* TestGitHub.swift */; };
 		FA0163DA1CF2A1C000887506 /* ShowDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0163D81CF2A1C000887506 /* ShowDetailVC.swift */; };
 		FA0163DB1CF2A1C000887506 /* ShowDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0163D91CF2A1C000887506 /* ShowDetailVC.xib */; };
 		FA63D89A1CE5CA100026C11F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D8981CE5CA100026C11F /* Cell.xib */; };
@@ -15,6 +15,8 @@
 		FA63D89E1CE5D0B70026C11F /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D89C1CE5D0B70026C11F /* DetailVC.xib */; };
 		FA65B6C01CE5BEAE000489EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */; };
 		FA65B6C11CE5BEAE000489EB /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */; };
+		FA6A47C21D123CB100A2DF37 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6A47C01D123CB100A2DF37 /* CustomCell.swift */; };
+		FA6A47C31D123CB100A2DF37 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6A47C11D123CB100A2DF37 /* CustomCell.xib */; };
 		FAA2FC271D10155E00C7A3C4 /* LocationVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */; };
 		FAA2FC311D101CDB00C7A3C4 /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */; };
 		FAB58EA31CDC402B00C1EDFA /* stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB58EA21CDC402B00C1EDFA /* stations.plist */; };
@@ -35,6 +37,7 @@
 		FABA7D151CCF23B000289B35 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D131CCF23B000289B35 /* LoginVC.xib */; };
 		FABA7D191CCF265500289B35 /* FovariteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D171CCF265500289B35 /* FovariteVC.swift */; };
 		FABA7D1A1CCF265500289B35 /* FovariteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D181CCF265500289B35 /* FovariteVC.xib */; };
+		FAC191EE1D13E0DC007B4FFE /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC191ED1D13E0DC007B4FFE /* Venue.swift */; };
 		FAEA7F021CE9B7A90077FB81 /* DetailFollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */; };
 		FAEA7F031CE9B7A90077FB81 /* DetailFollowerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */; };
 		FAF068511D0F97A3006F28C3 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF068501D0F97A3006F28C3 /* APIController.swift */; };
@@ -48,7 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B3E045B1D2BA55C00136DFD /* TestGitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestGitHub.swift; path = Baitaplon/TestGitHub.swift; sourceTree = "<group>"; };
+		4B3E045D1D2BA84600136DFD /* TestGitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestGitHub.swift; path = Baitaplon/TestGitHub.swift; sourceTree = "<group>"; };
 		FA0163D81CF2A1C000887506 /* ShowDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailVC.swift; sourceTree = "<group>"; };
 		FA0163D91CF2A1C000887506 /* ShowDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailVC.xib; sourceTree = "<group>"; };
 		FA63D8981CE5CA100026C11F /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
@@ -56,6 +59,8 @@
 		FA63D89C1CE5D0B70026C11F /* DetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
 		FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		FA6A47C01D123CB100A2DF37 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		FA6A47C11D123CB100A2DF37 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVenue.swift; sourceTree = "<group>"; };
 		FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
 		FAB58EA21CDC402B00C1EDFA /* stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = stations.plist; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 		FABA7D131CCF23B000289B35 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		FABA7D171CCF265500289B35 /* FovariteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FovariteVC.swift; sourceTree = "<group>"; };
 		FABA7D181CCF265500289B35 /* FovariteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FovariteVC.xib; sourceTree = "<group>"; };
+		FAC191ED1D13E0DC007B4FFE /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFollowerVC.swift; sourceTree = "<group>"; };
 		FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailFollowerVC.xib; sourceTree = "<group>"; };
 		FAF068501D0F97A3006F28C3 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
@@ -104,7 +110,7 @@
 		FABA7C911CCF18D600289B35 = {
 			isa = PBXGroup;
 			children = (
-				4B3E045B1D2BA55C00136DFD /* TestGitHub.swift */,
+				4B3E045D1D2BA84600136DFD /* TestGitHub.swift */,
 				FABA7C9C1CCF18D600289B35 /* Baitaplon */,
 				FABA7C9B1CCF18D600289B35 /* Products */,
 			);
@@ -224,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */,
+				FA6A47C01D123CB100A2DF37 /* CustomCell.swift */,
+				FA6A47C11D123CB100A2DF37 /* CustomCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 				FAF068501D0F97A3006F28C3 /* APIController.swift */,
 				FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */,
 				FAFBB45A1D10E4B300B0A14E /* PhotoVenue.swift */,
+				FAC191ED1D13E0DC007B4FFE /* Venue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 				FA65B6C11CE5BEAE000489EB /* HomeVC.xib in Resources */,
 				FA63D89A1CE5CA100026C11F /* Cell.xib in Resources */,
 				FA63D89E1CE5D0B70026C11F /* DetailVC.xib in Resources */,
+				FA6A47C31D123CB100A2DF37 /* CustomCell.xib in Resources */,
 				FABA7D111CCF239100289B35 /* ForgotPasswordVC.xib in Resources */,
 				FABA7CA81CCF18D700289B35 /* LaunchScreen.storyboard in Resources */,
 				FABA7CA51CCF18D700289B35 /* Assets.xcassets in Resources */,
@@ -387,18 +397,20 @@
 				FA65B6C01CE5BEAE000489EB /* HomeVC.swift in Sources */,
 				FABA7CFD1CCF1FEB00289B35 /* SettingVC.swift in Sources */,
 				FABA7D191CCF265500289B35 /* FovariteVC.swift in Sources */,
+				4B3E045E1D2BA84600136DFD /* TestGitHub.swift in Sources */,
 				FAF4F7A71CE41E58009FD9C0 /* Place.swift in Sources */,
 				FAA2FC311D101CDB00C7A3C4 /* AppDefine.swift in Sources */,
 				FABA7D0B1CCF22F300289B35 /* RegisterVC.swift in Sources */,
 				FAF068511D0F97A3006F28C3 /* APIController.swift in Sources */,
 				FAFBB45B1D10E4B300B0A14E /* PhotoVenue.swift in Sources */,
 				FA0163DA1CF2A1C000887506 /* ShowDetailVC.swift in Sources */,
-				4B3E045C1D2BA55C00136DFD /* TestGitHub.swift in Sources */,
 				FAFA2EC71CD0B7CF003B9D7B /* SingletionClass.swift in Sources */,
+				FAC191EE1D13E0DC007B4FFE /* Venue.swift in Sources */,
 				FAFA2ECB1CD0CCC3003B9D7B /* ShowVC.swift in Sources */,
 				FABA7CFB1CCF1FEB00289B35 /* MapVC.swift in Sources */,
 				FABA7C9E1CCF18D600289B35 /* AppDelegate.swift in Sources */,
 				FAA2FC271D10155E00C7A3C4 /* LocationVenue.swift in Sources */,
+				FA6A47C21D123CB100A2DF37 /* CustomCell.swift in Sources */,
 				FA63D89D1CE5D0B70026C11F /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

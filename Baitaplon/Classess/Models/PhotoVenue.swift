@@ -15,14 +15,13 @@ class PhotoVenue: NSObject {
     var width = 0
     var height =  0
     var urlpath = ""
-    var img = UIImage()
+    var img = UIImage(named: "no_image")
     
     func getURLPath(sizeW: Int,sizeH: Int) -> String {
-        
-        return "\(sizeW)x\(sizeH)"
+        return prefix + "\(sizeW)x\(sizeH)" + suffix
     }
+    
     func getURLOriginal() -> String {
-        return prefix + getURLPath(69, sizeH: 63) + suffix
+        return prefix + "original" + suffix
     }
-
 }

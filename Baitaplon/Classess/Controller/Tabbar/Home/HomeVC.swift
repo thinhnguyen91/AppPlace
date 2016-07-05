@@ -1,3 +1,4 @@
+
 // HomeVC.swift
 // Baitaplon
 //
@@ -10,15 +11,18 @@ import UIKit
 import MapKit
 
 class HomeVC: UIViewController {
+
     var tabBar: UITabBar?
+    var place: Place!
+    var venue: Venue!
+    var venues = [Venue]()
     var places = [Place]()
     var locationVenues = [LocationVenue]()
     var photoVenues = [PhotoVenue]()
-    var place: Place!
     var myShowVC = ShowVC()
     var searchResultsData: NSArray = []
-
     @IBOutlet weak var tableView: UITableView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,73 +32,107 @@ class HomeVC: UIViewController {
             NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.barTintColor = uicolorFromHex(16729344)
         self.navigationController?.navigationBar.translucent = true
-
         let nib = UINib(nibName: "ListtableView", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
-
+        //tabbar
+        tabBar = self.tabBarController!.tabBar
+        tabBar!.selectionIndicatorImage = UIImage().makeImageWithColorAndSize(uicolorFromHex(16777215),
+            size: CGSizeMake(tabBar!.frame.width/CGFloat(tabBar!.items!.count), tabBar!.frame.height))
+        // To change tintColor for unselect tabs
+        for item in tabBar!.items! as [UITabBarItem] {
+            if let image = item.image {
+                item.image = image.imageWithColor(uicolorFromHex(16777215)).imageWithRenderingMode(.AlwaysOriginal)
+            }
+        }
+        let api = APIController()
+        api.getDataFromurl(AppDefine.url) { (success, result, error) -> Void in
+            if !success {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            } else {
+                if let result = result {
+                    self.venues = result
+                    let venue = self.venues[0]
+                    let url = AppDefine.urlImageEndPoint + venue.id + AppDefine.urlImageOauth_token
+                    print(url)
+                }
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), { () -> Void in
+                    for i in 0 ..< self.venues.count {
+                        let vn: Venue = self.venues[i]
+                        let url = AppDefine.urlImageEndPoint + vn.id + AppDefine.urlImageOauth_token
+                        api.getDataImageurl(url, index: i) { (success, index, imageListString, error) -> Void in
+                            if success {
+                                if let imageListString = imageListString {
+                                    self.venues[index].photos = imageListString
+                                }
+                                if index == self.venues.count - 1 {
+                                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                        self.tableView.reloadData()
+                                    })
+                                }
+                            } else {
+                                if let error = error {
+                                    print(error.localizedDescription)
+                                }
+                            }
+                        }
+                    }
+                })
+            }
+        }
     }
+    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+      
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    
+    }
+    
+    
+ }
 
+ extension HomeVC: UITableViewDelegate,  UITableViewDataSource {
+    
     // MARK: tableview
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-
         return 1
     }
-
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return self.places.count
+        return self.venues.count
     }
-
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        let cell: ListtableView = self.tableView.dequeueReusableCellWithIdentifier("cell") as! ListtableView
-        let place = places[indexPath.row]
-//        let location  = locationVenues[indexPath.row]
-        let photo = photoVenues[indexPath.row]
-//        let imageview: UIImage = UIImage(named: place.avatar)!
-//        let imagestar: UIImage = UIImage(named: place.start)!
-
-        cell.nameList.text = place.name
-        cell.addessList.text = place.location?.address ?? ""
-        cell.imageList.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "\(photo.getURLOriginal())")!)!)
-        // cell.addessList.text = place.
-//        cell.startList.image = imagestar
-
+        
+        let cell:ListtableView = self.tableView.dequeueReusableCellWithIdentifier("cell") as! ListtableView
+        let venue = venues[indexPath.row]
+        if let photos = venue.photos {
+            let photo = photos[0]
+            cell.imageList.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "\(photo.getURLPath(300, sizeH: 200))")!)!)
+        }
+        cell.nameList.text = venue.name
+        cell.addessList.text = venue.location?.address ?? ""
         return cell
-
     }
-
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 72
     }
-
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
-        let item = places[indexPath.row]
+        let item = venues[indexPath.row]
         let myshowVC = ShowVC(nibName: "ShowVC", bundle: nil)
-        myshowVC.place = item
+        myshowVC.venue = item
         self.navigationController?.pushViewController(myshowVC, animated: true)
-
         print("Cell \(indexPath.row) of Section \(indexPath.section) ")
     }
 
-    func uicolorFromHex(rgbValue: UInt32) -> UIColor {
-        let red = CGFloat((rgbValue & 0xFF0000) >> 16) / 256.0
-        let green = CGFloat((rgbValue & 0xFF00) >> 8) / 256.0
-        let blue = CGFloat(rgbValue & 0xFF) / 256.0
-
-        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
-extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+//extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 
 //    func getDataFromurl(url: String) {
 //
@@ -185,9 +223,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 //        })
 //    }
 //
-}
+//}
 
-extension UIImage {
+ extension UIImage {
+
     func makeImageWithColorAndSize(color: UIColor, size: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         color.setFill()
@@ -198,20 +237,16 @@ extension UIImage {
     }
     func imageWithColor(tintColor: UIColor) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
-
         let context = UIGraphicsGetCurrentContext()! as CGContextRef
         CGContextTranslateCTM(context, 0, self.size.height)
         CGContextScaleCTM(context, 1.0, -1.0);
         CGContextSetBlendMode(context, CGBlendMode.Normal)
-
         let rect = CGRectMake(0, 0, self.size.width, self.size.height) as CGRect
         CGContextClipToMask(context, rect, self.CGImage)
         tintColor.setFill()
         CGContextFillRect(context, rect)
-
         let newImage = UIGraphicsGetImageFromCurrentImageContext() as UIImage
         UIGraphicsEndImageContext()
-
         return newImage
     }
 

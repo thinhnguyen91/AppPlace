@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapVC" customModule="Baitaplon" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="IwH-Ij-vgu" id="yzF-Yo-Szq"/>
                 <outlet property="mapView" destination="s3Y-KL-YRJ" id="4dv-YC-yUc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,13 +19,19 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="s3Y-KL-YRJ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </mapView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IwH-Ij-vgu">
+                    <rect key="frame" x="177" y="324" width="20" height="20"/>
+                    <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="IwH-Ij-vgu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6Rw-kb-RvV"/>
                 <constraint firstItem="s3Y-KL-YRJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="H8P-JJ-gfN"/>
                 <constraint firstAttribute="trailing" secondItem="s3Y-KL-YRJ" secondAttribute="trailing" id="T6a-0e-M8W"/>
                 <constraint firstAttribute="bottom" secondItem="s3Y-KL-YRJ" secondAttribute="bottom" id="lTQ-GA-yYL"/>
                 <constraint firstItem="s3Y-KL-YRJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mi6-Dm-D4Q"/>
+                <constraint firstItem="IwH-Ij-vgu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xjg-OR-o3c"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="555.5" y="249.5"/>

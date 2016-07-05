@@ -10,47 +10,43 @@ import UIKit
 
 
 class ShowDetailVC: UIViewController {
-    var btn = UIButton()
-    var btn1 = UIButton()
+    var buttonBack = UIButton()
+    var buttonHome = UIButton()
     var place: Place!
+    var venue: Venue!
     
     @IBOutlet weak var imgShow: UIImageView!
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var phoneText: UITextField!
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = place.name
+        self.title = venue.name
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationItem.hidesBackButton = true
-        
         //custom button uibaritem
-        btn1.setImage(UIImage(named: "List-25"), forState: .Normal)
-        btn1.frame = CGRectMake(0, 0, 25, 25)
-        btn1.addTarget(self, action: Selector("backhome:"), forControlEvents: .TouchUpInside)
+        buttonHome.setImage(UIImage(named: "List-25"), forState: .Normal)
+        buttonHome.frame = CGRectMake(0, 0, 25, 25)
+        buttonHome.addTarget(self, action: Selector("backhome:"), forControlEvents: .TouchUpInside)
         let item1 = UIBarButtonItem()
-        item1.customView = btn1
+        item1.customView = buttonHome
         self.navigationItem.rightBarButtonItem = item1
-        
-        btn.setImage(UIImage(named: "Back-25"), forState: .Normal)
-        btn.frame = CGRectMake(0, 0, 25, 25)
-        btn.titleLabel?.text = ""
-        btn.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
+        buttonBack.setImage(UIImage(named: "Back-25"), forState: .Normal)
+        buttonBack.frame = CGRectMake(0, 0, 25, 25)
+        buttonBack.titleLabel?.text = ""
+        buttonBack.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
         let item = UIBarButtonItem()
-        item.customView = btn
+        item.customView = buttonBack
         self.navigationItem.leftBarButtonItem = item
-        
         self.imgShow.layer.cornerRadius = imgShow.frame.size.width / 2
         self.imgShow.clipsToBounds = true
-        
         self.textName.delegate = self
         self.phoneText.delegate = self
-        
-        self.textName.text = place.name
+        self.textName.text = venue.name
         self.phoneText.text = String(place.phone)
         self.imgShow.image = UIImage(named: place.avatar)
     }
@@ -59,20 +55,16 @@ class ShowDetailVC: UIViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
-    
     func back(sender: UIBarButtonItem){
-            
-            self.navigationController?.popViewControllerAnimated(true)
-
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
-    
 }
+
 extension ShowDetailVC: UITextFieldDelegate{
     
 }

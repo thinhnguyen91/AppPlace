@@ -8,6 +8,6 @@
 
 import UIKit
 
-class TestGitHub: BaseViewController {
+class TestGitHub: UIViewController {
 
 }

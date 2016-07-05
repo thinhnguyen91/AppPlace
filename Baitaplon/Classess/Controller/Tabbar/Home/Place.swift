@@ -13,33 +13,21 @@ class Place: NSObject, MKAnnotation{
     var avatar: String = ""
     var start: String = ""
     var startyellow: String = ""
-    var name: String = ""
     var phone: Int = 0
-    var location: LocationVenue?
-    
     var image: UIImage?
     var title: String?
     let locationName: String
     let discipline: String
-    let coordinate: CLLocationCoordinate2D
+    var coordinate: CLLocationCoordinate2D
     var index = 0
-    var isFovarite = false
-    
-    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D, json: [String : AnyObject]) {
+    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D, index: Int ) {
         self.title = title
         self.locationName = locationName
         self.discipline = discipline
         self.coordinate = coordinate
-        self.name = json["name"] as? String ?? ""
-        self.title = json["address"] as? String ?? ""
-        if let locationDictionary = json["location"] {
-            self.location = LocationVenue(json: locationDictionary as! [String : AnyObject])
-        }
+        self.index = index
         super.init()
     }
-    
- 
-
     var subtitle: String? {
         return locationName
     }

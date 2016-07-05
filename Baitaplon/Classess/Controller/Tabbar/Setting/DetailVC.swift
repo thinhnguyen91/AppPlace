@@ -13,7 +13,7 @@ class DetailVC: UIViewController {
     var mySetting: SettingVC!
     var myListtableVC: ListtableView!
     var imageName : String?
-    var btn = UIButton()
+    var buttonBack = UIButton()
     var imagePick = UIImagePickerController()
     
     @IBOutlet weak var imgAvatar: UIImageView!
@@ -30,24 +30,22 @@ class DetailVC: UIViewController {
         self.navigationItem.hidesBackButton = true
         self.imgAvatar.layer.cornerRadius = imgAvatar.frame.size.width / 2
         self.imgAvatar.clipsToBounds = true
-        
         //custom button
-        btn.setImage(UIImage(named: "Back-25"), forState: .Normal)
-        btn.frame = CGRectMake(0, 0, 25, 25)
-        btn.setTitle("", forState: UIControlState.Normal)
-        btn.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
+        buttonBack.setImage(UIImage(named: "Back-25"), forState: .Normal)
+        buttonBack.frame = CGRectMake(0, 0, 25, 25)
+        buttonBack.setTitle("", forState: UIControlState.Normal)
+        buttonBack.addTarget(self, action: Selector("back:"), forControlEvents: .TouchUpInside)
         let item = UIBarButtonItem()
-        item.customView = btn
+        item.customView = buttonBack
         self.navigationItem.leftBarButtonItem = item
-        
         if let image = UIImage(named: imageName!) {
             self.imgAvatar.image = image
         }
-        
     }
+    
     //MARK: ACTION
+    
     @IBAction func kickButton(sender: AnyObject) {
-        
         let actionSheetController: UIAlertController = UIAlertController(title: "Action Sheet", message: "Swiftly Now! Choose an option!", preferredStyle: .ActionSheet)
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in }
         let takePictureAction: UIAlertAction = UIAlertAction(title: "Take Picture", style: .Default) { action -> Void in
@@ -56,7 +54,6 @@ class DetailVC: UIViewController {
         let choosePictureAction: UIAlertAction = UIAlertAction(title: "Choose From Camera Roll", style: .Default) { action -> Void in
             self.openPicture()
         }
-        
         actionSheetController.addAction(takePictureAction)
         actionSheetController.addAction(cancelAction)
         actionSheetController.addAction(choosePictureAction)
@@ -92,14 +89,15 @@ class DetailVC: UIViewController {
     func barButtonItemClicked(sender: UIBarButtonItem){
         print("kich edit")
     }
+    
     func back(sender: UIBarButtonItem){
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }
 
 extension DetailVC:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
