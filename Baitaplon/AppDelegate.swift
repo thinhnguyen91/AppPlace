@@ -87,6 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigation = UINavigationController(rootViewController: loginVC)
         self.window?.rootViewController = navigation
     }
+
     func uicolorFromHex(rgbValue:UInt32)->UIColor{
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
@@ -94,6 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return UIColor(red:red, green:green, blue:blue, alpha:1.0)
     }
+    
     func applicationWillResignActive(application: UIApplication) {
      
     }

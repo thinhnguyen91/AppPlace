@@ -7,46 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA0163DA1CF2A1C000887506 /* ShowDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0163D81CF2A1C000887506 /* ShowDetailVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FA0163DB1CF2A1C000887506 /* ShowDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0163D91CF2A1C000887506 /* ShowDetailVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FA63D89A1CE5CA100026C11F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D8981CE5CA100026C11F /* Cell.xib */; settings = {ASSET_TAGS = (); }; };
-		FA63D89D1CE5D0B70026C11F /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63D89B1CE5D0B70026C11F /* DetailVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FA63D89E1CE5D0B70026C11F /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D89C1CE5D0B70026C11F /* DetailVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FA65B6C01CE5BEAE000489EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FA65B6C11CE5BEAE000489EB /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FAA2FC271D10155E00C7A3C4 /* LocationVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */; settings = {ASSET_TAGS = (); }; };
-		FAA2FC311D101CDB00C7A3C4 /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */; settings = {ASSET_TAGS = (); }; };
-		FAB58EA31CDC402B00C1EDFA /* stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB58EA21CDC402B00C1EDFA /* stations.plist */; settings = {ASSET_TAGS = (); }; };
-		FAB8409A1CDB5840008F92E1 /* MapdetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB840981CDB5840008F92E1 /* MapdetailVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FAB8409B1CDB5840008F92E1 /* MapdetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB840991CDB5840008F92E1 /* MapdetailVC.xib */; settings = {ASSET_TAGS = (); }; };
+		4B3E045C1D2BA55C00136DFD /* TestGitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E045B1D2BA55C00136DFD /* TestGitHub.swift */; };
+		FA0163DA1CF2A1C000887506 /* ShowDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0163D81CF2A1C000887506 /* ShowDetailVC.swift */; };
+		FA0163DB1CF2A1C000887506 /* ShowDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0163D91CF2A1C000887506 /* ShowDetailVC.xib */; };
+		FA63D89A1CE5CA100026C11F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D8981CE5CA100026C11F /* Cell.xib */; };
+		FA63D89D1CE5D0B70026C11F /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63D89B1CE5D0B70026C11F /* DetailVC.swift */; };
+		FA63D89E1CE5D0B70026C11F /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA63D89C1CE5D0B70026C11F /* DetailVC.xib */; };
+		FA65B6C01CE5BEAE000489EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B6BE1CE5BEAE000489EB /* HomeVC.swift */; };
+		FA65B6C11CE5BEAE000489EB /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65B6BF1CE5BEAE000489EB /* HomeVC.xib */; };
+		FAA2FC271D10155E00C7A3C4 /* LocationVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC261D10155E00C7A3C4 /* LocationVenue.swift */; };
+		FAA2FC311D101CDB00C7A3C4 /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FC301D101CDB00C7A3C4 /* AppDefine.swift */; };
+		FAB58EA31CDC402B00C1EDFA /* stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB58EA21CDC402B00C1EDFA /* stations.plist */; };
+		FAB8409A1CDB5840008F92E1 /* MapdetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB840981CDB5840008F92E1 /* MapdetailVC.swift */; };
+		FAB8409B1CDB5840008F92E1 /* MapdetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB840991CDB5840008F92E1 /* MapdetailVC.xib */; };
 		FABA7C9E1CCF18D600289B35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7C9D1CCF18D600289B35 /* AppDelegate.swift */; };
 		FABA7CA51CCF18D700289B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CA41CCF18D700289B35 /* Assets.xcassets */; };
 		FABA7CA81CCF18D700289B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CA61CCF18D700289B35 /* LaunchScreen.storyboard */; };
-		FABA7CFB1CCF1FEB00289B35 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7CEC1CCF1FEB00289B35 /* MapVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FABA7CFC1CCF1FEB00289B35 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CED1CCF1FEB00289B35 /* MapVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FABA7CFD1CCF1FEB00289B35 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7CEF1CCF1FEB00289B35 /* SettingVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FABA7CFE1CCF1FEB00289B35 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CF01CCF1FEB00289B35 /* SettingVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FABA7D0B1CCF22F300289B35 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D091CCF22F300289B35 /* RegisterVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FABA7D0C1CCF22F300289B35 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D0A1CCF22F300289B35 /* RegisterVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FABA7D101CCF239100289B35 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D0E1CCF239100289B35 /* ForgotPasswordVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FABA7D111CCF239100289B35 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D0F1CCF239100289B35 /* ForgotPasswordVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FABA7D141CCF23B000289B35 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D121CCF23B000289B35 /* LoginVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FABA7D151CCF23B000289B35 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D131CCF23B000289B35 /* LoginVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FABA7D191CCF265500289B35 /* FovariteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D171CCF265500289B35 /* FovariteVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FABA7D1A1CCF265500289B35 /* FovariteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D181CCF265500289B35 /* FovariteVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FAEA7F021CE9B7A90077FB81 /* DetailFollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FAEA7F031CE9B7A90077FB81 /* DetailFollowerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FAF068511D0F97A3006F28C3 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF068501D0F97A3006F28C3 /* APIController.swift */; settings = {ASSET_TAGS = (); }; };
-		FAF4F7A71CE41E58009FD9C0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4F7A61CE41E58009FD9C0 /* Place.swift */; settings = {ASSET_TAGS = (); }; };
-		FAFA2EC01CD0732B003B9D7B /* ListtableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EBE1CD0732B003B9D7B /* ListtableView.swift */; settings = {ASSET_TAGS = (); }; };
-		FAFA2EC11CD0732B003B9D7B /* ListtableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFA2EBF1CD0732B003B9D7B /* ListtableView.xib */; settings = {ASSET_TAGS = (); }; };
-		FAFA2EC71CD0B7CF003B9D7B /* SingletionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EC61CD0B7CF003B9D7B /* SingletionClass.swift */; settings = {ASSET_TAGS = (); }; };
-		FAFA2ECB1CD0CCC3003B9D7B /* ShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EC91CD0CCC3003B9D7B /* ShowVC.swift */; settings = {ASSET_TAGS = (); }; };
-		FAFA2ECC1CD0CCC3003B9D7B /* ShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFA2ECA1CD0CCC3003B9D7B /* ShowVC.xib */; settings = {ASSET_TAGS = (); }; };
-		FAFBB45B1D10E4B300B0A14E /* PhotoVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBB45A1D10E4B300B0A14E /* PhotoVenue.swift */; settings = {ASSET_TAGS = (); }; };
+		FABA7CFB1CCF1FEB00289B35 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7CEC1CCF1FEB00289B35 /* MapVC.swift */; };
+		FABA7CFC1CCF1FEB00289B35 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CED1CCF1FEB00289B35 /* MapVC.xib */; };
+		FABA7CFD1CCF1FEB00289B35 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7CEF1CCF1FEB00289B35 /* SettingVC.swift */; };
+		FABA7CFE1CCF1FEB00289B35 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7CF01CCF1FEB00289B35 /* SettingVC.xib */; };
+		FABA7D0B1CCF22F300289B35 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D091CCF22F300289B35 /* RegisterVC.swift */; };
+		FABA7D0C1CCF22F300289B35 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D0A1CCF22F300289B35 /* RegisterVC.xib */; };
+		FABA7D101CCF239100289B35 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D0E1CCF239100289B35 /* ForgotPasswordVC.swift */; };
+		FABA7D111CCF239100289B35 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D0F1CCF239100289B35 /* ForgotPasswordVC.xib */; };
+		FABA7D141CCF23B000289B35 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D121CCF23B000289B35 /* LoginVC.swift */; };
+		FABA7D151CCF23B000289B35 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D131CCF23B000289B35 /* LoginVC.xib */; };
+		FABA7D191CCF265500289B35 /* FovariteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7D171CCF265500289B35 /* FovariteVC.swift */; };
+		FABA7D1A1CCF265500289B35 /* FovariteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA7D181CCF265500289B35 /* FovariteVC.xib */; };
+		FAEA7F021CE9B7A90077FB81 /* DetailFollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA7F001CE9B7A90077FB81 /* DetailFollowerVC.swift */; };
+		FAEA7F031CE9B7A90077FB81 /* DetailFollowerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEA7F011CE9B7A90077FB81 /* DetailFollowerVC.xib */; };
+		FAF068511D0F97A3006F28C3 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF068501D0F97A3006F28C3 /* APIController.swift */; };
+		FAF4F7A71CE41E58009FD9C0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4F7A61CE41E58009FD9C0 /* Place.swift */; };
+		FAFA2EC01CD0732B003B9D7B /* ListtableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EBE1CD0732B003B9D7B /* ListtableView.swift */; };
+		FAFA2EC11CD0732B003B9D7B /* ListtableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFA2EBF1CD0732B003B9D7B /* ListtableView.xib */; };
+		FAFA2EC71CD0B7CF003B9D7B /* SingletionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EC61CD0B7CF003B9D7B /* SingletionClass.swift */; };
+		FAFA2ECB1CD0CCC3003B9D7B /* ShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA2EC91CD0CCC3003B9D7B /* ShowVC.swift */; };
+		FAFA2ECC1CD0CCC3003B9D7B /* ShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFA2ECA1CD0CCC3003B9D7B /* ShowVC.xib */; };
+		FAFBB45B1D10E4B300B0A14E /* PhotoVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBB45A1D10E4B300B0A14E /* PhotoVenue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B3E045B1D2BA55C00136DFD /* TestGitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestGitHub.swift; path = Baitaplon/TestGitHub.swift; sourceTree = "<group>"; };
 		FA0163D81CF2A1C000887506 /* ShowDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailVC.swift; sourceTree = "<group>"; };
 		FA0163D91CF2A1C000887506 /* ShowDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailVC.xib; sourceTree = "<group>"; };
 		FA63D8981CE5CA100026C11F /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		FABA7C911CCF18D600289B35 = {
 			isa = PBXGroup;
 			children = (
+				4B3E045B1D2BA55C00136DFD /* TestGitHub.swift */,
 				FABA7C9C1CCF18D600289B35 /* Baitaplon */,
 				FABA7C9B1CCF18D600289B35 /* Products */,
 			);
@@ -390,6 +393,7 @@
 				FAF068511D0F97A3006F28C3 /* APIController.swift in Sources */,
 				FAFBB45B1D10E4B300B0A14E /* PhotoVenue.swift in Sources */,
 				FA0163DA1CF2A1C000887506 /* ShowDetailVC.swift in Sources */,
+				4B3E045C1D2BA55C00136DFD /* TestGitHub.swift in Sources */,
 				FAFA2EC71CD0B7CF003B9D7B /* SingletionClass.swift in Sources */,
 				FAFA2ECB1CD0CCC3003B9D7B /* ShowVC.swift in Sources */,
 				FABA7CFB1CCF1FEB00289B35 /* MapVC.swift in Sources */,
