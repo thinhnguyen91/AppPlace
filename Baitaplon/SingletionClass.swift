@@ -11,15 +11,14 @@ import UIKit
 class SingletionClass: NSObject {
 
     var isSingletionClass: Bool!
-    
-    class var sharedInstance:SingletionClass{
+
+    class var sharedInstance: SingletionClass {
         struct Singletion {
-            static let  instance = SingletionClass()
-            
+            static let instance = SingletionClass()
+
         }
         return Singletion.instance
-        
+
     }
-    
-    
+
 }
